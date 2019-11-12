@@ -125,6 +125,7 @@ class Login extends Component {
     return (
 
       <div className="login-view-container">
+          <div className="triangle-bottomright"></div>
         <div className="login-container">
             <h1>Login</h1>
 

@@ -10,7 +10,7 @@ const NavBar = props => {
   return (
     <nav className="navbar navbar-light bg-light navbar-expand-lg">
       <Link to="/" exact className="navbar-brand">
-        Authentication Presentation
+          <img src={require('../assets/navbar-logo.png')}/>
       </Link>
       <div className="collapse navbar-collapse">
         <ul className="navbar-nav mr-auto">
