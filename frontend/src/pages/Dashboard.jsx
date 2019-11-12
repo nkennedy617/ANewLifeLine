@@ -2,7 +2,23 @@ import React from "react";
 import { Redirect } from "react-router-dom";
 import "../style/dashboard.style.css";
 const Dashboard = ({ loggedIn, user }) => {
-  return (
+  class Dashboard extends React.Component{
+    constructor(props){
+      this.setState({
+        firstName: "",
+        lastName: "",
+      });
+    }
+
+    addInformation(){
+      this.setState({
+        firstName: "",
+        lastName: "",
+      });
+    };
+
+   };
+   return (
     <>
       {loggedIn ? (
         <div className="dashboard-view-container">
@@ -20,12 +36,20 @@ const Dashboard = ({ loggedIn, user }) => {
                              placeholder="Username" value={user.email}></input>
                       <label className="form-control-label" htmlFor="input-username">First Name</label>
                       <input type="text" id="input-username" className="form-control form-control-alternative"
-                             placeholder="First"></input>
+                             placeholder="First" value={user.firstName}
+                             ref = {(firstName) => firstName = firstName}></input>
                       <label className="form-control-label" htmlFor="input-username">Last Name</label>
                       <input type="text" id="input-username" className="form-control form-control-alternative"
-                             placeholder="Last"></input>
+                             placeholder="Last" value={user.lastName}
+                             ref = {(lastName) => lastName = lastName}></input>
                       <p></p>
-                      <button className="btn btn-primary" type="button">Edit Profile</button>
+                      
+                    <button className="btn btn-primary" type="button" onClick={ ()=> this.props.addInformation(                   
+                      user.firstName,
+                      user.lasName,
+                    )}>
+                    <i>Edit</i>
+                </button>
                   </div>
               </div>
           </div>
