@@ -1,83 +1,18 @@
-body{
-  width: 100%;
-  height: auto;
-  background-color: grey;
-}
-
 .home-container {
-  position: 'absolute';
   text-align: center;
-  color: blue;
+  color: white;
   background-color: #b5c1ca;
-  top: 50%
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
 }
 
 .home-button {
-  position: 'absolute';
   outline: none;
   background: none;
-  border: 1px solid rgb(241, 19, 19);
+  border: 1px solid white;
   color: white;
   padding: 10px 20px;
   border-radius: 10px;
-}
-
-.home-button2 {
-  position: 'absolute';
-  outline: none;
-  background: none;
-  border: 1px solid rgb(241, 19, 19);
-  color: white;
-  padding: 10px 20px;
-  border-radius: 10px;
-}
-
-.home-image .home-button {
-  position: absolute;
-  top: 50%;
-  left: 40%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  background-color: rgb(104, 18, 216);
-  color: white;
-  font-size: 16px;
-  padding: 12px 24px;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-.home-image .home-button2 {
-  position: absolute;
-  top: 50%;
-  left: 60%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  background-color: rgb(104, 18, 216);
-  color: white;
-  font-size: 16px;
-  padding: 12px 24px;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-.home-image .home-button:hover {
-  background-color: black;
-}
-
-.home-image .home-button2:hover {
-  background-color: black;
-}
-
-.home-image img {
-  width: 100%;
-  height: auto;
-}
-
-
-
-.home-image {
-  position: relative;
-  width: 100%;
 }

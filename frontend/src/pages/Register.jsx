@@ -98,69 +98,96 @@ class Register extends Component {
       );
     }
     return (
-      <div>
-        <h3>Register User</h3>
-        {this.state.registerErrors.length > 0
+        <div className="login-view-container">
+            <div className="login-container">
+        <h1>Register User</h1>
+                <div className="login-input-container">
+
+                {this.state.registerErrors.length > 0
           ? this.state.registerErrors.map((errMsg, index) => (
               <p className="register-error-message" key={index}>
                 {errMsg.msg}
               </p>
             ))
           : null}
+                </div>
         <form onSubmit={e => this.onSubmit(e)}>
           <div className="form-group">
-            <label>Username: </label>
+              <div className="input-group input-group-alternative">
+                  <div className="input-group-prepend">
+                      <span className="input-group-text"><i className="ni ni-hat-3"></i></span>
+                  </div>
             <input
               type="text"
               name="name"
               required
+              placeholder="Name"
               className="form-control"
               value={this.state.name}
               onChange={e => this.onChange(e)}
             />
           </div>
+          </div>
           <div className="form-group">
-            <label>Email: </label>
+              <div className="input-group input-group-alternative">
+                  <div className="input-group-prepend">
+                      <span className="input-group-text"><i className="ni ni-email-83"></i></span>
+                  </div>
             <input
               type="email"
               name="email"
               required
+              placeholder="Email"
               className="form-control"
               value={this.state.email}
               onChange={e => this.onChange(e)}
             />
           </div>
+          </div>
+
           <div className="form-group">
-            <label>Password: </label>
+              <div className="input-group input-group-alternative">
+                  <div className="input-group-prepend">
+                      <span className="input-group-text"><i className="ni ni-lock-circle-open"></i></span>
+                  </div>
             <input
               type="password"
               name="password"
               required
+              placeholder="Password"
               className="form-control"
               value={this.state.password}
               onChange={e => this.onChange(e)}
             />
           </div>
+          </div>
+
           <div className="form-group">
-            <label>Confirm Password: </label>
+              <div className="input-group input-group-alternative">
+                  <div className="input-group-prepend">
+                      <span className="input-group-text"><i className="ni ni-lock-circle-open"></i></span>
+                  </div>
             <input
               type="password"
               name="password2"
+              placeholder="Confirm Password"
               required
               className="form-control"
               value={this.state.password2}
               onChange={e => this.onChange(e)}
             />
           </div>
+          </div>
           <div className="form-group">
             <input
               type="submit"
-              value="Register Now!"
+              value="Register!"
               className="btn btn-primary"
             />
           </div>
         </form>
       </div>
+        </div>
     );
   }
 }

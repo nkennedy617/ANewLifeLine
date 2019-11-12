@@ -10,7 +10,7 @@ const NavBar = props => {
   return (
     <nav className="navbar navbar-light bg-light navbar-expand-lg">
       <Link to="/" exact className="navbar-brand">
-        A New Life Line
+        Authentication Presentation
       </Link>
       <div className="collapse navbar-collapse">
         <ul className="navbar-nav mr-auto">
@@ -21,7 +21,7 @@ const NavBar = props => {
           </li>
           <li className="navbar-item">
             <Link to="/mainmenu" className="nav-link">
-              About
+              Main Menu
             </Link>
           </li>
           {!props.loggedIn ? (
