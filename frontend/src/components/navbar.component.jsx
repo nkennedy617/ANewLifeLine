@@ -10,7 +10,7 @@ const NavBar = props => {
   return (
     <nav className="navbar navbar-light bg-light navbar-expand-lg">
       <Link to="/" exact className="navbar-brand">
-        Authentication Presentation
+          <img src={require('../assets/navbar-logo.png')}/>
       </Link>
       <div className="collapse navbar-collapse">
         <ul className="navbar-nav mr-auto">
@@ -49,6 +49,11 @@ const NavBar = props => {
                   Protected
                 </Link>
               </li>
+                <li className="navbar-item">
+                    <Link to="/calendar" className="nav-link">
+                        Calendar
+                    </Link>
+                </li>
               <li className="navbar-item">
                 <Logout logout={logout} />
               </li>

@@ -100,7 +100,7 @@ class Register extends Component {
     return (
         <div className="login-view-container">
             <div className="login-container">
-        <h1>Register User</h1>
+        <h1>Register</h1>
                 <div className="login-input-container">
 
                 {this.state.registerErrors.length > 0
@@ -121,7 +121,7 @@ class Register extends Component {
               type="text"
               name="name"
               required
-              placeholder="Name"
+              placeholder="Username"
               className="form-control"
               value={this.state.name}
               onChange={e => this.onChange(e)}

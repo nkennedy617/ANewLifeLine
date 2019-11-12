@@ -1,6 +1,13 @@
+@font-face {
+    font-family: SpaceGrotesk-Bold;
+    font-style: normal;
+    src: url(../assets/fonts/SpaceGrotesk-Bold.woff) format('woff');
+}
 h1 {
-    color: #373A3C;
+    color: #5f5a5a;
     padding-bottom: 0.8rem;
+    font-family: SpaceGrotesk-Bold;
+
 }
 .login-view-container {
     background: linear-gradient(87deg, #88CDEA 0, #b9f5fd 100%) !important;
@@ -13,7 +20,6 @@ h1 {
 .login-container {
     padding: 1.25rem 1.5rem;
     margin-bottom: 0;
-    background-color: #fff;
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     margin-top: -8rem !important;
     padding-bottom: 3rem !important;
@@ -28,6 +34,7 @@ h1 {
     max-width: 41.666667%;
     background-color: #f7fafc !important;
     border: 0 !important;
+    box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
 
 }
 
@@ -380,4 +387,57 @@ section {
     background-color: #5762D5;
     border-color: #2B4570;
     box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.separator {
+    position: absolute;
+    top: auto;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 150px;
+    transform: translateZ(0);
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.separator svg {
+    position: absolute;
+    pointer-events: none;
+}
+
+.separator-top {
+    top: 0;
+    bottom: auto;
+}
+
+.separator-top svg {
+    top: 0;
+}
+
+.separator-bottom {
+    top: auto;
+    bottom: 0;
+}
+
+.separator-bottom svg {
+    bottom: 0;
+}
+
+.separator-inverse {
+    transform: rotate(180deg);
+}
+
+.separator-skew {
+    height: 60px;
+}
+
+.fill-default {
+    fill: #172b4d;
+}
+
+svg{
+    padding-top: 20rem;
+    width: 100%;
+
 }
