@@ -1,0 +1,12 @@
+
+.idea/
+
+backend/config/config.js
+
+node_modules/.bin/concurrently.cmd
+
+node_modules/.bin/semver.cmd
+
+node_modules/.bin/tree-kill.cmd
+
+node_modules/.bin/which.cmd
