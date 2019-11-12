@@ -41,7 +41,7 @@ const NavBar = props => {
             <>
               <li className="navbar-item">
                 <Link to="/dashboard" className="nav-link">
-                  My Account
+                  Dashboard
                 </Link>
               </li>
               <li className="navbar-item">
