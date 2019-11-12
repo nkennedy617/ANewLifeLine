@@ -1,9 +1,12 @@
 # Config file
 backend/config/config.js
+
 #Ignore files related to API keys
 .env
+
 #Ignore SASSS config files
 .sass-cache
+
 # Node stuff
 node_modules
 .npm
@@ -12,4 +15,5 @@ node_modules
 logs
 *.log
 npm-debug.log*
+
 .idea/

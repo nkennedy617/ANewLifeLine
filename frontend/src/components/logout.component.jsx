@@ -10,7 +10,7 @@ const Logout = props => {
   return (
     <div className="nav-item">
       <form onSubmit={onSubmit}>
-        <button className="nav-link" type="submit">
+        <button className="btn btn-primary"  type="submit">
           Logout
         </button>
       </form>

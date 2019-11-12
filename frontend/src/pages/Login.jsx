@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import { withRouter, Redirect } from "react-router-dom";
 import "../style/login.style.css";
+import "../assets/js/plugins/nucleo/css/nucleo.css";
+import "../assets/js/plugins/@fortawesome/fontawesome-free/css/all.min.css"
+
 
 //We will need to install and import axios
 class Login extends Component {
@@ -120,10 +123,14 @@ class Login extends Component {
     if (this.props.loggedIn)
       return <Redirect to={{ pathname: this.state.redirectTo }} />;
     return (
+
       <div className="login-view-container">
+          <div className="triangle-bottomright"></div>
         <div className="login-container">
+            <h1>Login</h1>
+
           <div className="login-input-container">
-            <h3>Login User</h3>
+
             <br />
           </div>
           {this.state.loginError ? <p>{this.state.loginError}</p> : null}
@@ -131,32 +138,46 @@ class Login extends Component {
             onSubmit={e => this.onSubmit(e)}
             className="login-form-container"
           >
-            <div className="login-input-container">
-              <label htmlFor="email"></label>
+            <div className="form-group">
+                <div className="input-group input-group-alternative">
+                    <div className="input-group-prepend">
+                        <span className="input-group-text"><i className="ni ni-email-83"></i></span>
+                    </div>
               <input
                 type="email"
                 name="email"
-                placeholder="Enter Email"
+                placeholder="Email"
                 required
-                className="login-input"
+                className="form-control"
                 value={this.state.email}
                 onChange={e => this.onChange(e)}
               />
             </div>
-            <div className="login-input-container">
-              <label htmlFor="password"></label>
-              <input
-                type="password"
-                name="password"
-                placeholder="Enter Password"
-                required
-                className="login-input"
-                value={this.state.password}
-                onChange={e => this.onChange(e)}
-              />
             </div>
+
+              <div className="form-group">
+                  <div className="input-group input-group-alternative">
+                      <div className="input-group-prepend">
+                          <span className="input-group-text"><i className="ni ni-lock-circle-open"></i></span>
+                      </div>
+                      <input
+                          class="form-control"
+                          type="password"
+                          name="password"
+                          placeholder="Password"
+                          required
+                          value={this.state.password}
+                          onChange={e => this.onChange(e)}
+                      />
+                  </div>
+              </div>
+
+
+
+
+
             <div className="login-input-container">
-              <input type="submit" value="Login" className="login-button" />
+              <input type="submit" value="Login" className="btn btn-primary my-4" />
             </div>
           </form>
         </div>

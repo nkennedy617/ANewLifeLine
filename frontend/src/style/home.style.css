@@ -5,7 +5,7 @@ body{
 }
 
 .home-container {
-  position: 'absolute';
+  position: absolute;
   text-align: center;
   color: blue;
   background-color: #b5c1ca;
@@ -13,10 +13,10 @@ body{
 }
 
 .home-button {
-  position: 'absolute';
+  position: absolute;
   outline: none;
   background: none;
-  border: 1px solid rgb(241, 19, 19);
+  border: 1px solid rgb(241, 19, 19);;
   color: white;
   padding: 10px 20px;
   border-radius: 10px;
