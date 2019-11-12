@@ -1,12 +1,17 @@
-
-.idea/
-
+# Config file
 backend/config/config.js
 
-node_modules/.bin/concurrently.cmd
+#Ignore files related to API keys
+.env
 
-node_modules/.bin/semver.cmd
+#Ignore SASSS config files
+.sass-cache
 
-node_modules/.bin/tree-kill.cmd
-
-node_modules/.bin/which.cmd
+# Node stuff
+node_modules
+.npm
+.node_repl_history
+.lock-wscript
+logs
+*.log
+npm-debug.log*
