@@ -10,15 +10,14 @@ const localizer = momentLocalizer(moment)
 
 class MyCalendar extends Component {
     state = {
-        events: [
-            {
-                start: new Date(),
-                end: new Date(moment().add(1, "days")),
-                title: "A New Life Line Event"
-            }
-        ]
+        events: [ ]
     };
 
+    componentDidMount () {
+        getEvents((events) => {
+            this.setState({events})
+        })
+    }
 
     render() {
         return (
