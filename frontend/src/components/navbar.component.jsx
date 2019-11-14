@@ -21,7 +21,7 @@ const NavBar = props => {
           </li>
           <li className="navbar-item">
             <Link to="/mainmenu" className="nav-link">
-              Main Menu
+              About
             </Link>
           </li>
           {!props.loggedIn ? (
@@ -45,8 +45,8 @@ const NavBar = props => {
                 </Link>
               </li>
               <li className="navbar-item">
-                <Link to="/protected" className="nav-link">
-                  Protected
+                <Link to="/Forum" className="nav-link">
+                  Forum
                 </Link>
               </li>
                 <li className="navbar-item">
