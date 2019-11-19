@@ -105,6 +105,18 @@ class App extends Component {
         this.setState({ loggedIn: user.loggedIn, user: user });
     }
 
+   updateUser(user, firstName, lastName) {
+        //console.log(this.state.loggedIn);
+        console.log('firstName: ' + firstName);
+        this.setState({ loggedIn: user.loggedIn, user: user });
+        if (firstName != null && lastName != null)
+        {
+            this.setState({firstName: firstName, lastName: lastName});
+        }
+
+        console.log('user first name ' + user.firstName);
+    }
+
     componentDidMount() {
         //this.getUser();
     }
@@ -134,6 +146,7 @@ class App extends Component {
         <Dashboard
         loggedIn={this.state.loggedIn}
         user={this.state.user}
+        addInformation = {this.updateUser}
         />
     )}
         />
