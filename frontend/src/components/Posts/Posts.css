@@ -1,0 +1,9 @@
+.post-body {
+    margin: 1em 20%
+}
+
+@media(max-width: 300px) {
+    .post-body {
+        margin: 1em;
+    }
+}
