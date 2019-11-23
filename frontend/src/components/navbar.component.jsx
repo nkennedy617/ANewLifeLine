@@ -10,7 +10,7 @@ const NavBar = props => {
   return (
     <nav className="navbar navbar-light bg-light navbar-expand-lg">
       <Link to="/" exact className="navbar-brand">
-          <img src={require('../assets/navbar-logo.png')}/>
+        <img src={require('../assets/navbar-logo.png')} />
       </Link>
       <div className="collapse navbar-collapse">
         <ul className="navbar-nav mr-auto">
@@ -38,27 +38,34 @@ const NavBar = props => {
               </li>
             </>
           ) : (
-            <>
-              <li className="navbar-item">
-                <Link to="/dashboard" className="nav-link">
-                  Dashboard
-                </Link>
-              </li>
-              <li className="navbar-item">
-                <Link to="/Forum" className="nav-link">
-                  Forum
-                </Link>
-              </li>
+              <>
                 <li className="navbar-item">
-                    <Link to="/calendar" className="nav-link">
-                        Calendar
+                  <Link to="/dashboard" className="nav-link">
+                    Dashboard
+                </Link>
+                </li>
+                <li className="navbar-item">
+                  <Link to="/Forum" className="nav-link">
+                    Forum
+                </Link>
+                </li>
+                <li className="navbar-item">
+                  <Link to="/calendar" className="nav-link">
+                    Calendar
                     </Link>
                 </li>
-              <li className="navbar-item">
-                <Logout logout={logout} />
-              </li>
-            </>
-          )}
+                <li className="navbar-item">
+                  <Link to="/tips" className="nav-link">
+                    Tips
+                    </Link>
+                </li>
+              </>
+            )}
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li className="navbar-item" >
+            <Logout logout={logout} />
+          </li>
         </ul>
       </div>
     </nav>
