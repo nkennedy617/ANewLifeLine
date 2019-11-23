@@ -1,3 +1,9 @@
+@font-face {
+  font-family: SpaceGrotesk-Bold;
+  font-style: normal;
+  src: url(../assets/fonts/SpaceGrotesk-Bold.woff) format('woff');
+}
+
 .dashboard-view-container {
   background: linear-gradient(122.38deg, #358CFF 0%, #DCF9FD 100.91%, #DCF9FD 100.91%);
   color:#525f7f;
@@ -7,13 +13,10 @@
   align-items: center;
 }
 .dashboard-background-polygon{
-position: absolute;
-width: 1440px;
-height: 506px;
-left: 0px;
-top: 516px;
-
-background: #111B47;
+  position: fixed;
+  width: auto;
+  height: auto;
+  bottom:0px;
 }
 /* rgba(227, 242, 253, 0.3) #93cdf7 */
 .dashboard-container {
@@ -109,4 +112,9 @@ background: #111B47;
   font-size: 0.875rem;
   line-height: 1.5;
   border-radius: 0.375rem;
+}
+
+.background-image img {
+  width: 100%;
+  height: auto;
 }

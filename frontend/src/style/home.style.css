@@ -81,16 +81,8 @@ body{
 }
 
 .home-image img {
-  width: 100%;
+  width: auto;
   height: auto;
-}
-
-
-
-.home-image {
-  background-color:#e3f2fd;
-  position: relative;
-  width: 100%;
 }
 
 .home-buttons-container {

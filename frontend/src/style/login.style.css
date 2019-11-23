@@ -441,3 +441,10 @@ svg{
     width: 100%;
 
 }
+
+.login-background-polygon{
+    position: fixed;
+    width: auto;
+    height: auto;
+    bottom:0px;
+  }

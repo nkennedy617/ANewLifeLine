@@ -42,6 +42,7 @@ class Dashboard extends React.Component {
         {loggedIn ? (
           <div className="dashboard-view-container">
             <div className="dashboard-background-polygon">
+            <img src={require('../assets/BackgroundPolygon.png')}/>
             </div>
             <div className="dashboard-container">
               <div className="card bg">
