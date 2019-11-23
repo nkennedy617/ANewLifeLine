@@ -3,15 +3,15 @@ import { Redirect } from "react-router-dom";
 import "../style/dashboard.style.css";
 
 class Dashboard extends React.Component {
-  
+
   test() {
     console.log("Called")
   }
   constructor(props) {
     //Necessary for class components
-    
+
     super(props);
-    this.state={
+    this.state = {
       firstName: "",
       lastName: "",
     };
@@ -25,59 +25,70 @@ class Dashboard extends React.Component {
       //const val1 = this.firstName;
       //const val2 = this.lastName;*/
 
-      console.log('name: ' + firstName + ' ' + lastName);
+    console.log('name: ' + firstName + ' ' + lastName);
 
-      //this.updateUser(user, firstName, lastName);
+    //this.updateUser(user, firstName, lastName);
 
-      this.setState({
-        firstName: firstName,
-        lastName: lastName
-      })
+    this.setState({
+      firstName: firstName,
+      lastName: lastName
+    })
   };
 
-render()
-{  
-  const {loggedIn, user} = this.props;
-return (
-  <>
-    {loggedIn ? (
-      <div className="dashboard-view-container">
-        <div className="dashboard-container">
-          <div className="card bg">
-            <p></p>
-            <h1>My Account</h1>
-            <h5>Hello, {user.name}!</h5>
-            <div className="card-body">
-              <label className="form-control-label" htmlFor="input-username">Username</label>
-              <input type="text" id="input-username" className="form-control form-control-alternative"
-                placeholder="Username" value={user.name}></input>
-              <label className="form-control-label" htmlFor="input-username">Email</label>
-              <input type="text" id="input-username" className="form-control form-control-alternative"
-                placeholder="Username" value={user.email}></input>
-              <label className="form-control-label" htmlFor="input-username">First Name</label>
-              <input type="text" id="input-firstname" name="getFirst" className="form-control form-control-alternative"
-                placeholder="First" value={this.firstName}
-                ref={(firstName) => firstName = firstName}></input>
-              <label className="form-control-label" htmlFor="input-username">Last Name</label>
-              <input type="text" id="input-lastname" name="getLast" className="form-control form-control-alternative"
-                placeholder="Last" value={user.lastName}
-                ref={(lastName) => lastName = lastName}></input>
-              <p></p>
-              <button className="btn btn-primary" type="button" onClick={() => this.addInformation(document.getElementById('input-firstname').value, document.getElementById('input-lastname').value)}>
-                <i>Edit</i>
-              </button>
+  render() {
+    const { loggedIn, user } = this.props;
+    return (
+      <>
+        {loggedIn ? (
+          <div className="dashboard-view-container">
+            <div className="dashboard-background-polygon">
+            </div>
+            <div className="dashboard-container">
+              <div className="card bg">
+                <p></p>
+                <h1>My Account</h1>
+                <h5>Hello, {user.name}!</h5>
+                <div className="card-body">
+                  <label className="form-control-label" htmlFor="input-username">Username</label>
+                  <input type="text" id="input-username" className="form-control form-control-alternative"
+                    placeholder="Username" value={user.name}></input>
+                  <label className="form-control-label" htmlFor="input-username">Email</label>
+                  <input type="text" id="input-username" className="form-control form-control-alternative"
+                    placeholder="Username" value={user.email}></input>
+                  <label className="form-control-label" htmlFor="input-username">First Name</label>
+                  <input type="text" id="input-firstname" name="getFirst" className="form-control form-control-alternative"
+                    placeholder="First" value={this.firstName}
+                    ref={(firstName) => firstName = firstName}></input>
+                  <label className="form-control-label" htmlFor="input-username">Last Name</label>
+                  <input type="text" id="input-lastname" name="getLast" className="form-control form-control-alternative"
+                    placeholder="Last" value={user.lastName}
+                    ref={(lastName) => lastName = lastName}></input>
+                  <label className="form-control-label" htmlFor="input-username">Education</label>
+                  <input type="text" id="input-education" name="getEdu" className="form-control form-control-alternative"
+                    placeholder="Education" value={user.education}
+                    ref={(education) => education = education}></input>
+                    <label className="form-control-label" htmlFor="input-username">Employment Informatiion</label>
+                    <textarea rows="4" class="form-control form-control-alternative" placeholder="(This information will not be public)"></textarea>
+                    <div class="form-group focused">
+                    <label className="form-control-label" htmlFor="input-username">Institutional Information</label>
+                    <textarea rows="4" class="form-control form-control-alternative" placeholder="(This information will not be public)"></textarea>
+                  </div>
+                  <p></p>
+                  <button className="btn btn-primary" type="button" onClick={() => this.addInformation(document.getElementById('input-firstname').value, document.getElementById('input-lastname').value)}>
+                    <i>Edit</i>
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-    ) : (
-        <Redirect to="/users/login" />
-      )}
-  </>
-);
-  /* is user.property coming from the databse or not */
-}
+        ) : (
+            <Redirect to="/users/login" />
+          )}
+      </>
+    );
+    /* is user.property coming from the databse or not */
+  }
 
 };
-  
+
 export default Dashboard;

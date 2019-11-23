@@ -1,33 +1,43 @@
 body{
   width: 100%;
   height: auto;
-  background-color: grey;
+  background-color:#e3f2fd;
 }
 
 .home-container {
   position: absolute;
   text-align: center;
   color: blue;
-  background-color: #b5c1ca;
+  background-color:#e3f2fd;
   top: 50%
 }
 
 .home-button {
   position: absolute;
+  top: 50%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   outline: none;
   background: none;
-  border: 1px solid rgb(241, 19, 19);;
-  color: white;
+  border: 1px solid #111B47;
+  background: #111B47;
+  color: #ffffff;
   padding: 10px 20px;
   border-radius: 10px;
 }
 
 .home-button2 {
-  position: 'absolute';
+  position: absolute;
+  top: 50%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   outline: none;
   background: none;
-  border: 1px solid rgb(241, 19, 19);
-  color: white;
+  border: 1px solid #111B47;
+  color: #111B47;
+  background: #ffffff;
   padding: 10px 20px;
   border-radius: 10px;
 }
@@ -78,6 +88,37 @@ body{
 
 
 .home-image {
+  background-color:#e3f2fd;
   position: relative;
   width: 100%;
+}
+
+.home-buttons-container {
+  position:center;
+}
+
+.intro{
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 39.06%;
+  bottom: 33.04%;
+}
+
+.intro-textbox-title{
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 48px;
+  color: #091133;
+}
+
+.intro-textbox-text{
+  font-family: Roboto;
+font-style: normal;
+font-weight: 500;
+font-size: 36px;
+line-height: 48px;
+color: #091133;
 }
