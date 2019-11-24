@@ -12,6 +12,7 @@ import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
 import Protected from "./components/ExampleProtectedRoute";
 import Calendar from "./components/Calendar";
+import Forum from "./pages/Forum";
 
 import AuthenticatedComponent from "./components/AuthenticatedComponent";
 class App extends Component {
@@ -119,7 +120,8 @@ class App extends Component {
         />
         <Switch>
         <Route path="/" exact component={Home} />
-        <Route path="/mainmenu" component={MainMenu} />
+        <Route path="/mainmenu" component={Forum} />
+        <Route path="/forum" component={Forum}/>
         <Route path="/users/register" component={Register} />
         <Route
         path="/users/login"

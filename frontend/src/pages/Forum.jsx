@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import firebase from 'firebase/app';
 import 'firebase/database';
-import './App.css';
-import Messages from "./components/Messages/Messages";
-import Config from "./config/Firebase";
+import '../App.css';
+import Messages from "../components/Messages/Messages";
+import Config from "../config/Firebase";
 
 
-class App extends Component {
+class Forum extends Component {
     constructor(props) {
         super(props);
 
@@ -26,4 +26,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Forum;
