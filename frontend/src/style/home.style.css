@@ -1,3 +1,9 @@
+@font-face {
+  font-family: SpaceGrotesk-Bold;
+  font-style: normal;
+  src: url(../assets/fonts/SpaceGrotesk-Bold.woff) format('woff');
+}
+
 body{
   width: 100%;
   height: auto;
@@ -27,6 +33,11 @@ body{
   border-radius: 10px;
 }
 
+.home-button:hover{
+  background: #358CFF;
+  border: 1px solid  #358CFF;
+}
+
 .home-button2 {
   position: relative;
   top: 0%;
@@ -40,6 +51,12 @@ body{
   background: #ffffff;
   padding: 10px 20px;
   border-radius: 10px;
+}
+
+.home-button2:hover{
+  background: #358CFF;
+  border: 1px solid  #358CFF;
+  color: #fff;
 }
 
 .home-image .home-button {
@@ -107,12 +124,12 @@ body{
   position: relative;
   width: 400px;
   height: 400px;
-  top: 30%;
+  top: 20%;
   left: 5%
 }
 
 .intro-textbox-title{
-  font-family: Roboto;
+  font-family: SpaceGrotesk-Bold;
   font-style: normal;
   font-weight: 500;
   font-size: 50px;
@@ -121,7 +138,7 @@ body{
 }
 
 .intro-textbox-text{
-  font-family: Roboto;
+  font-family: SpaceGrotesk-Bold;
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
@@ -164,20 +181,57 @@ body{
   height: 100%;
 }
 
+.about-tile-container{
+  position: absolute;
+  text-align: left;
+  left: 70%;
+  width: 200px;
+  height: 100%;
+}
+
 .landing-tile-title{
-  font-family: Roboto;
+  font-family: SpaceGrotesk-Bold;
   font-style: normal;
   font-weight: 500;
   font-size: 30px;
-  line-height: 66px;
+  line-height: 60px;
   color: #091133;
 }
 
+.landing-tile-title2{
+  font-family: SpaceGrotesk-Bold;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 35px;
+  color: #FFD166;
+}
+
 .landing-tile-text{
-  font-family: Roboto;
+  font-family: SpaceGrotesk-Bold;
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
   line-height: 20px;
   color: #091133;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.about-image-container{
+  position: absolute;
+  left: 10%;
+  height: 300px;
+  width: 300px;
+}
+
+.home-footer{
+  position: absolute;
+  left: 0%;
+  right: 0%;
+
+  background: #DCF9FD;
 }
