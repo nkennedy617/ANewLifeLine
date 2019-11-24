@@ -10,7 +10,8 @@ h1 {
 
 }
 .login-view-container {
-  background: linear-gradient(122.38deg, #358CFF 0%, #DCF9FD 100.91%, #DCF9FD 100.91%);
+  
+  background: url('../assets/BackgroundPolygon.png') no-repeat left bottom, linear-gradient(122.38deg, #358CFF 0%, #DCF9FD 100.91%, #DCF9FD 100.91%);;
   height: 800px;
   display: flex;
   justify-content: center;

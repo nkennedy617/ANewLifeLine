@@ -16,6 +16,7 @@ body{
   background-color:#fff;
   height: 800px;
   width: 100%;
+  padding:20px
 }
 
 .home-button {
@@ -56,7 +57,7 @@ body{
 .home-button2:hover{
   background: #358CFF;
   border: 1px solid  #358CFF;
-  color: #fff;
+  color: #111B47;
 }
 
 .home-image .home-button {
@@ -149,7 +150,7 @@ body{
 .home-image-container{
   position: absolute;
   width: 80%;
-  height: 70%;
+  height: auto;
   right: 0%;
   top: 10%;
 }
@@ -230,8 +231,7 @@ img {
 
 .home-footer{
   position: absolute;
-  left: 0%;
-  right: 0%;
-
+  height:200px;
+  width: auto;
   background: #DCF9FD;
 }
