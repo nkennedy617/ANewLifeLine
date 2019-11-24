@@ -10,11 +10,12 @@ h1 {
 
 }
 .login-view-container {
-    background: linear-gradient(122.38deg, #358CFF 0%, #DCF9FD 100.91%, #DCF9FD 100.91%);
-  height: 600px;
+  background: linear-gradient(122.38deg, #358CFF 0%, #DCF9FD 100.91%, #DCF9FD 100.91%);
+  height: 800px;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .login-container {
@@ -384,9 +385,21 @@ section {
 
 .btn-primary {
     color: #fff;
-    background-color: #5762D5;
-    border-color: #2B4570;
+    background-color: #358CFF;
+    border-color: #358CFF;
     box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.btn-primary-Google {
+    color: #fff;
+    background-color: #358CFF;
+    border-color: #358CFF;
+    box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 24px;
 }
 
 .separator {
@@ -448,3 +461,24 @@ svg{
     height: auto;
     bottom:0px;
   }
+
+.line1 {
+    position: relative;
+    width: auto;
+    height: 0px;  
+    border: 1px solid #CDD1D4;
+}
+
+.line-container{
+    align-items: stretch;
+    text-align: center;
+}
+
+.small-text1{
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    color: #B0B8BC;
+}

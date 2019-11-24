@@ -75,10 +75,10 @@ class Dashboard extends React.Component {
                     <textarea rows="4" class="form-control form-control-alternative" placeholder="(This information will not be public)"></textarea>
                   </div>
                   <p></p>
-                  <button className="btn btn-primary" type="button" onClick={() => this.addInformation(document.getElementById('input-firstname').value, document.getElementById('input-lastname').value)}>
+                </div>
+                <button className="btn btn-primary" type="button" onClick={() => this.addInformation(document.getElementById('input-firstname').value, document.getElementById('input-lastname').value)}>
                     <i>Edit</i>
                   </button>
-                </div>
               </div>
             </div>
           </div>

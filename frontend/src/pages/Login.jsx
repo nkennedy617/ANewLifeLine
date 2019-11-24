@@ -124,7 +124,10 @@ class Login extends Component {
       return <Redirect to={{ pathname: this.state.redirectTo }} />;
     return (
 
-      <div className="login-view-container">      
+      <div className="login-view-container">
+        <div className="dashboard-background-polygon">
+          <img src={require('../assets/BackgroundPolygon.png')} />
+        </div>
         <div className="triangle-bottomright"></div>
         <div className="login-container">
           <h1>Login</h1>
@@ -173,6 +176,12 @@ class Login extends Component {
             </div>
             <div className="login-input-container">
               <input type="submit" value="Login" className="btn btn-primary my-4" />
+            </div>
+            <div className="line1"> </div>
+            <p></p>
+            <h6>Or log in with</h6>
+            <div className="login-input-container">
+              <input type="submit" value="Google" className="btn btn-primary" />
             </div>
           </form>
         </div>

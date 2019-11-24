@@ -98,96 +98,97 @@ class Register extends Component {
       );
     }
     return (
-        <div className="login-view-container">
-            <div className="login-container">
-        <h1>Register</h1>
-                <div className="login-input-container">
+      <div className="login-view-container">
+        <div className="login-container">
+          <h1>Register</h1>
+          <div className="login-input-container">
 
-                {this.state.registerErrors.length > 0
-          ? this.state.registerErrors.map((errMsg, index) => (
-              <p className="register-error-message" key={index}>
-                {errMsg.msg}
-              </p>
-            ))
-          : null}
+            {this.state.registerErrors.length > 0
+              ? this.state.registerErrors.map((errMsg, index) => (
+                <p className="register-error-message" key={index}>
+                  {errMsg.msg}
+                </p>
+              ))
+              : null}
+          </div>
+          <form onSubmit={e => this.onSubmit(e)}>
+            <div className="form-group">
+              <div className="input-group input-group-alternative">
+                <div className="input-group-prepend">
+                  <span className="input-group-text"><i className="ni ni-hat-3"></i></span>
                 </div>
-        <form onSubmit={e => this.onSubmit(e)}>
-          <div className="form-group">
+                <input
+                  type="text"
+                  name="name"
+                  required
+                  placeholder="Username"
+                  className="form-control"
+                  value={this.state.name}
+                  onChange={e => this.onChange(e)}
+                />
+              </div>
+            </div>
+            <div className="form-group">
               <div className="input-group input-group-alternative">
-                  <div className="input-group-prepend">
-                      <span className="input-group-text"><i className="ni ni-hat-3"></i></span>
-                  </div>
-            <input
-              type="text"
-              name="name"
-              required
-              placeholder="Username"
-              className="form-control"
-              value={this.state.name}
-              onChange={e => this.onChange(e)}
-            />
-          </div>
-          </div>
-          <div className="form-group">
-              <div className="input-group input-group-alternative">
-                  <div className="input-group-prepend">
-                      <span className="input-group-text"><i className="ni ni-email-83"></i></span>
-                  </div>
-            <input
-              type="email"
-              name="email"
-              required
-              placeholder="Email"
-              className="form-control"
-              value={this.state.email}
-              onChange={e => this.onChange(e)}
-            />
-          </div>
-          </div>
+                <div className="input-group-prepend">
+                  <span className="input-group-text"><i className="ni ni-email-83"></i></span>
+                </div>
+                <input
+                  type="email"
+                  name="email"
+                  required
+                  placeholder="Email"
+                  className="form-control"
+                  value={this.state.email}
+                  onChange={e => this.onChange(e)}
+                />
+              </div>
+            </div>
 
-          <div className="form-group">
+            <div className="form-group">
               <div className="input-group input-group-alternative">
-                  <div className="input-group-prepend">
-                      <span className="input-group-text"><i className="ni ni-lock-circle-open"></i></span>
-                  </div>
-            <input
-              type="password"
-              name="password"
-              required
-              placeholder="Password"
-              className="form-control"
-              value={this.state.password}
-              onChange={e => this.onChange(e)}
-            />
-          </div>
-          </div>
+                <div className="input-group-prepend">
+                  <span className="input-group-text"><i className="ni ni-lock-circle-open"></i></span>
+                </div>
+                <input
+                  type="password"
+                  name="password"
+                  required
+                  placeholder="Password"
+                  className="form-control"
+                  value={this.state.password}
+                  onChange={e => this.onChange(e)}
+                />
+              </div>
+            </div>
 
-          <div className="form-group">
+            <div className="form-group">
               <div className="input-group input-group-alternative">
-                  <div className="input-group-prepend">
-                      <span className="input-group-text"><i className="ni ni-lock-circle-open"></i></span>
-                  </div>
-            <input
-              type="password"
-              name="password2"
-              placeholder="Confirm Password"
-              required
-              className="form-control"
-              value={this.state.password2}
-              onChange={e => this.onChange(e)}
-            />
-          </div>
-          </div>
-          <div className="form-group">
-            <input
-              type="submit"
-              value="Register!"
-              className="btn btn-primary"
-            />
-          </div>
-        </form>
-      </div>
+                <div className="input-group-prepend">
+                  <span className="input-group-text"><i className="ni ni-lock-circle-open"></i></span>
+                </div>
+                <input
+                  type="password"
+                  name="password2"
+                  placeholder="Confirm Password"
+                  required
+                  className="form-control"
+                  value={this.state.password2}
+                  onChange={e => this.onChange(e)}
+                />
+              </div>
+            </div>
+            <div className="form-group">
+              <input
+                type="submit"
+                value="Create account"
+                className="btn btn-primary"
+              />
+            </div>
+            <div className="line1"> </div>
+          </form>
         </div>
+      </div>
     );
   }
 }
