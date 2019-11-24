@@ -140,6 +140,7 @@ class App extends Component {
     )}
         />
         <Route path="/protected" component={Protected} />
+
         <Route path="/calendar" component={Calendar} />
         </AuthenticatedComponent>
         </Switch>
