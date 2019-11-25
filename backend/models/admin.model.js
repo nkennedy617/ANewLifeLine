@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const bcrypt = require("bcryptjs");
 const uniqueValidator = require('mongoose-unique-validator');
 
-const userSchema = mongoose.Schema({
+const adminSchema = mongoose.Schema({
     name: {
         type: String,
         required: true,
@@ -22,19 +22,19 @@ const userSchema = mongoose.Schema({
     }
 });
 
-userSchema.plugin(uniqueValidator);
+adminSchema.plugin(uniqueValidator);
 
-userSchema.methods.generateHash = function(password) {
+adminSchema.methods.generateHash = function(password) {
     return bcrypt.hashSync(password, bcrypt.genSaltSync(10), null);
 };
-userSchema.methods.validatePassword = function(password) {
+adminSchema.methods.validatePassword = function(password) {
     return bcrypt.compareSync(password, this.password);
 };
 
-module.exports.getUserbyUsername = function(name,callback){
-  const query = {
-    name: name
-  }
-  User.findOne(query, callback);
+module.exports.getAdminbyUsername = function(name,callback){
+    const query = {
+        name: name
+    }
+    Admin.findOne(query, callback);
 }
-module.exports = mongoose.model("user_profile", userSchema);
+module.exports = mongoose.model("admin_profile", adminSchema);

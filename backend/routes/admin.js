@@ -5,8 +5,8 @@ const db = require("../config/database");
 
 const router = express.Router();
 
-//User model
-const User = require("../models/user.model");
+//Admin model
+const Admin = require("../models/admin.model");
 
 //Verify - this is for the frontend
 router.get("/verify", (req, res) => {
@@ -20,7 +20,7 @@ router.get("/verify", (req, res) => {
     );
     console.log("This is req.user from /verify" + JSON.stringify(req.user));
     if (req.isAuthenticated()) {
-        const clientUser = {
+        const admin = {
             id: req.user._id,
             name: req.user.name,
             email: req.user.email,
@@ -29,10 +29,10 @@ router.get("/verify", (req, res) => {
         return res.send({
             success: true,
             message: "Valid session",
-            user: clientUser
+            user: admin
         });
     } else {
-        emptyUser = {
+        emptyAdmin = {
             username: "",
             email: "",
             loggedIn: false
@@ -40,7 +40,7 @@ router.get("/verify", (req, res) => {
         return res.send({
             success: false,
             message: "Couldn't find session",
-            user: emptyUser
+            user: emptyAdmin
         });
     }
 });
@@ -78,7 +78,7 @@ router.post("/register", (req, res) => {
     }
 
     //Validation passed
-    User.findOne({ email }).then(user => {
+    Admin.findOne({ email }).then(user => {
         if (user) {
             //Flash the error
             errors.push({ msg: "Email is already registered" });
@@ -88,30 +88,30 @@ router.post("/register", (req, res) => {
             });
         }
         //Create a new database entry
-        const newUser = new User({
+        const newAdmin = new User({
             name,
             email,
             password
         });
 
-        console.log(newUser);
-        newUser.password = newUser.generateHash(password);
-        newUser.save((error, user) => {
+        console.log(newAdmin);
+        newAdmin.password = newAdmin.generateHash(password);
+        newAdmin.save((error, admin) => {
             console.log("This is req.session from /register: " + req.session);
             if (error) {
-              if(error.errors.name) {
-                  return res.send({
-                      success: false,
-                      message:  "Username is already taken."
-                  })
-              }
-              else {
-                  errors.push("Server error: registering new user to database");
-                  return res.send({
-                      success: false,
-                      message: errors
-                  });
-              }
+                if(error.errors.name) {
+                    return res.send({
+                        success: false,
+                        message:  "Username is already taken."
+                    })
+                }
+                else {
+                    errors.push("Server error: registering new user to database");
+                    return res.send({
+                        success: false,
+                        message: errors
+                    });
+                }
             } else {
                 return res.send({
                     success: true,
@@ -130,20 +130,20 @@ router.post("/login", passport.authenticate("local"), (req, res) => {
     );
     //console.log("This is req.body from /login: " + req.body);
 
-    req.session.userId = req.user._id;
-    res.locals.user = req.user;
+    req.session.adminId = req.user._id;
+    res.locals.admin = req.admin;
     res.locals.session = req.session;
     const client = {
-        id: req.user._id,
-        name: req.user.name,
-        email: req.user.email,
+        id: req.admin._id,
+        name: req.admin.name,
+        email: req.admin.email,
         loggedIn: true
     };
 
     return res.send({
         success: true,
         message: "successful login",
-        user: req.user
+        user: req.admin
     });
     //Our function defined in passport takes care of ths route
 });
