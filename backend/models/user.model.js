@@ -19,7 +19,12 @@ const userSchema = mongoose.Schema({
     Date: {
         type: Date,
         default: Date.now()
+    },
+    role: {
+        type: String,
+        default: 'user'
     }
+
 });
 
 userSchema.plugin(uniqueValidator);

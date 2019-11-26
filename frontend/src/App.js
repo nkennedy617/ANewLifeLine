@@ -12,6 +12,7 @@ import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
 import Protected from "./components/ExampleProtectedRoute";
 import Calendar from "./components/Calendar";
+import Admin from "./pages/Admin";
 
 import AuthenticatedComponent from "./components/AuthenticatedComponent";
 class App extends Component {
@@ -109,40 +110,79 @@ class App extends Component {
         //this.getUser();
     }
     render() {
-        return (
-            <Router history={history}>
-            <NavBar
-        user={this.state.user}
-        loggedIn={this.state.loggedIn}
-        updateUser={this.updateUser}
-        logout={this.logout}
-        />
-        <Switch>
-        <Route path="/" exact component={Home} />
-        <Route path="/mainmenu" component={MainMenu} />
-        <Route path="/users/register" component={Register} />
-        <Route
-        path="/users/login"
-        render={() => (
-        <Login login={this.login} loggedIn={this.state.loggedIn} />
-    )}
-        />
-        <AuthenticatedComponent verify={this.verify}>
-    <Route
-        path="/dashboard"
-        render={() => (
-        <Dashboard
-        loggedIn={this.state.loggedIn}
-        user={this.state.user}
-        />
-    )}
-        />
-        <Route path="/protected" component={Protected} />
-        <Route path="/calendar" component={Calendar} />
-        </AuthenticatedComponent>
-        </Switch>
-        </Router>
-    );
+        if (this.state.user.role == "admin") {
+            console.log("is admin");
+            return (
+                <Router history={history}>
+                    <NavBar
+                        user={this.state.user}
+                        loggedIn={this.state.loggedIn}
+                        updateUser={this.updateUser}
+                        logout={this.logout}
+                    />
+                    <Switch>
+                        <Route path="/" exact component={Home}/>
+                        <Route path="/mainmenu" component={MainMenu}/>
+                        <Route path="/users/register" component={Register}/>
+                        <Route
+                            path="/users/login"
+                            render={() => (
+                                <Login login={this.login} loggedIn={this.state.loggedIn}/>
+                            )}
+                        />
+                        <AuthenticatedComponent verify={this.verify}>
+                            <Route
+                                path="/dashboard"
+                                render={() => (
+                                    <Dashboard
+                                        loggedIn={this.state.loggedIn}
+                                        user={this.state.user}
+                                    />
+                                )}
+                            />
+                            <Route path="/Admin" component={Admin}/>
+                            <Route path="/calendar" component={Calendar}/>
+                        </AuthenticatedComponent>
+                    </Switch>
+                </Router>
+            );
+        }
+        else {
+            return (
+                <Router history={history}>
+                    <NavBar
+                        user={this.state.user}
+                        loggedIn={this.state.loggedIn}
+                        updateUser={this.updateUser}
+                        logout={this.logout}
+                    />
+                    <Switch>
+                        <Route path="/" exact component={Home}/>
+                        <Route path="/mainmenu" component={MainMenu}/>
+                        <Route path="/users/register" component={Register}/>
+                        <Route
+                            path="/users/login"
+                            render={() => (
+                                <Login login={this.login} loggedIn={this.state.loggedIn}/>
+                            )}
+                        />
+                        <AuthenticatedComponent verify={this.verify}>
+                            <Route
+                                path="/dashboard"
+                                render={() => (
+                                    <Dashboard
+                                        loggedIn={this.state.loggedIn}
+                                        user={this.state.user}
+                                    />
+                                )}
+                            />
+                            <Route path="/protected" component={Protected}/>
+                            <Route path="/calendar" component={Calendar}/>
+                        </AuthenticatedComponent>
+                    </Switch>
+                </Router>
+            );
+        }
     }
 }
 

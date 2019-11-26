@@ -24,6 +24,7 @@ router.get("/verify", (req, res) => {
             id: req.user._id,
             name: req.user.name,
             email: req.user.email,
+            role: req.user.role,
             loggedIn: true
         };
         return res.send({
@@ -137,6 +138,7 @@ router.post("/login", passport.authenticate("local"), (req, res) => {
         id: req.user._id,
         name: req.user.name,
         email: req.user.email,
+        role: req.user.role,
         loggedIn: true
     };
 
