@@ -185,7 +185,6 @@ class Register extends Component {
                 className="btn btn-primary"
               />
             </div>
-            <div className="line1"> </div>
           </form>
         </div>
       </div>
