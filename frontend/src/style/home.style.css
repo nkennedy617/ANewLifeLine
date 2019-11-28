@@ -42,7 +42,7 @@ body{
 .home-button2 {
   position: relative;
   top: 0%;
-  left: 20%;
+  left: 30%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   outline: none;

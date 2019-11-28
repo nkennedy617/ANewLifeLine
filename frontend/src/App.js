@@ -12,8 +12,10 @@ import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
 import Protected from "./components/ExampleProtectedRoute";
 import Calendar from "./components/Calendar";
+import PageNotFound from "./components/PageNotFound";
 
 import AuthenticatedComponent from "./components/AuthenticatedComponent";
+import Footer from "./components/footer";
 class App extends Component {
     constructor(props) {
         super(props);
@@ -137,6 +139,7 @@ class App extends Component {
         path="/users/login"
         render={() => (
         <Login login={this.login} loggedIn={this.state.loggedIn} />
+        
     )}
         />
         <AuthenticatedComponent verify={this.verify}>

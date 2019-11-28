@@ -8,7 +8,7 @@ const NavBar = props => {
     props.logout("/users/logout");
   };
   return (
-    <nav className="navbar navbar-light bg-light navbar-expand-lg">
+    <nav className="navbar navbar-light bg-white navbar-expand-lg">
       <Link to="/" exact className="navbar-brand">
         <img src={require('../assets/navbar-logo.png')} />
       </Link>
@@ -21,7 +21,7 @@ const NavBar = props => {
           </li>
           <li className="navbar-item">
             <Link to="/mainmenu" className="nav-link">
-              About
+              Tips
             </Link>
           </li>
           {!props.loggedIn ? (
@@ -52,11 +52,6 @@ const NavBar = props => {
                 <li className="navbar-item">
                   <Link to="/calendar" className="nav-link">
                     Calendar
-                    </Link>
-                </li>
-                <li className="navbar-item">
-                  <Link to="/tips" className="nav-link">
-                    Tips
                     </Link>
                 </li>
               </>
