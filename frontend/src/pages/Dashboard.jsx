@@ -28,7 +28,7 @@ class Dashboard extends React.Component {
     console.log('name: ' + firstName + ' ' + lastName);
 
     //this.updateUser(user, firstName, lastName);
-
+    //worked to get names here: this.addInformation(document.getElementById('input-firstname').value, document.getElementById('input-lastname').value)*
     this.setState({
       firstName: firstName,
       lastName: lastName
@@ -36,7 +36,10 @@ class Dashboard extends React.Component {
   };
 
   render() {
-    const { loggedIn, user } = this.props;
+    
+    const { loggedIn, user, userUpdate} = this.props;
+    console.log('USER');
+    console.log(user);
     return (
       <>
         {loggedIn ? (
@@ -58,7 +61,7 @@ class Dashboard extends React.Component {
                     placeholder="Username" value={user.email}></input>
                   <label className="form-control-label" htmlFor="input-username">First Name</label>
                   <input type="text" id="input-firstname" name="getFirst" className="form-control form-control-alternative"
-                    placeholder="First" value={this.firstName}
+                    placeholder="First" value={user.firstName}
                     ref={(firstName) => firstName = firstName}></input>
                   <label className="form-control-label" htmlFor="input-username">Last Name</label>
                   <input type="text" id="input-lastname" name="getLast" className="form-control form-control-alternative"
@@ -76,7 +79,7 @@ class Dashboard extends React.Component {
                   </div>
                   <p></p>
                 </div>
-                <button className="btn btn-primary" type="button" onClick={() => this.addInformation(document.getElementById('input-firstname').value, document.getElementById('input-lastname').value)}>
+                <button className="btn btn-primary" type="button" onClick={() => userUpdate(user, document.getElementById('input-firstname').value, document.getElementById('input-lastname').value)}>
                     <i>Edit</i>
                   </button>
               </div>

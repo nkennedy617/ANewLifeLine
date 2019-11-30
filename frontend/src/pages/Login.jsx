@@ -39,7 +39,10 @@ class Login extends Component {
     const { email, password } = this.state;
     const user = {
       email,
-      password
+      password,
+      //below added by Irelis
+      //firstName,
+      //lastName
     };
 
     this.props.login("/users/login", user, data => {
@@ -47,7 +50,10 @@ class Login extends Component {
         this.setState({
           email: "",
           password: "",
-          isLoading: false
+          isLoading: false,
+          //below added by Irelis
+          /*firstName: "",
+          lastName: ""*/
         });
 
         console.log(`Successfully logged in! ${JSON.stringify(data)}`);

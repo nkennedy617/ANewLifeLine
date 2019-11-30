@@ -24,7 +24,10 @@ router.get("/verify", (req, res) => {
       id: req.user._id,
       name: req.user.name,
       email: req.user.email,
-      loggedIn: true
+      loggedIn: true,
+      //below was added by Irelis
+      firstName: req.user.firstName,
+      lastName: req.user.lastName
     };
     return res.send({
       success: true,
@@ -35,7 +38,10 @@ router.get("/verify", (req, res) => {
     emptyUser = {
       username: "",
       email: "",
-      loggedIn: false
+      loggedIn: false,
+      //below added by Irelis
+      firstName: "",
+      lastName: ""
     };
     return res.send({
       success: false,
@@ -91,7 +97,10 @@ router.post("/register", (req, res) => {
     const newUser = new User({
       name,
       email,
-      password
+      password,
+      //below added by Irelis
+      firstName,
+      lastName
     });
 
     console.log(newUser);
@@ -129,7 +138,10 @@ router.post("/login", passport.authenticate("local"), (req, res) => {
     id: req.user._id,
     name: req.user.name,
     email: req.user.email,
-    loggedIn: true
+    loggedIn: true,
+    //below was added by Irelis
+    firstName: req.user.firstName,
+    lastName: req.user.lastName
   };
 
   return res.send({

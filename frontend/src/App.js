@@ -108,13 +108,17 @@ class App extends Component {
    updateUser(user, firstName, lastName) {
         //console.log(this.state.loggedIn);
         console.log('firstName: ' + firstName);
-        this.setState({ loggedIn: user.loggedIn, user: user });
-        if (firstName != null && lastName != null)
+        if (firstName != "" && lastName != "")
         {
-            this.setState({firstName: firstName, lastName: lastName});
+            user.firstName = firstName;
+            user.lastName = lastName;
         }
+        this.setState({ loggedIn: user.loggedIn, user: user });
+        
 
-        console.log('user first name ' + user.firstName);
+        /*console.log('user first name ' + user.firstName);
+        console.log('user last name ' + user.lastName);*/
+        console.log(user);
     }
 
     componentDidMount() {
@@ -143,10 +147,11 @@ class App extends Component {
     <Route
         path="/dashboard"
         render={() => (
+            console.log('CALLING DASHBOARD...'),
         <Dashboard
         loggedIn={this.state.loggedIn}
         user={this.state.user}
-        addInformation = {this.updateUser}
+        userUpdate = {this.updateUser}
         />
     )}
         />
