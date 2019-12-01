@@ -39,7 +39,7 @@ class Login extends Component {
     const { email, password } = this.state;
     const user = {
       email,
-      password,
+      password
       //below added by Irelis
       //firstName,
       //lastName
@@ -50,7 +50,7 @@ class Login extends Component {
         this.setState({
           email: "",
           password: "",
-          isLoading: false,
+          isLoading: false
           //below added by Irelis
           /*firstName: "",
           lastName: ""*/

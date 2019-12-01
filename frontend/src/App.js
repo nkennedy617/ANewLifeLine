@@ -119,7 +119,38 @@ class App extends Component {
         /*console.log('user first name ' + user.firstName);
         console.log('user last name ' + user.lastName);*/
         console.log(user);
-    }
+
+        axios.put("/users/register", user).then(response => {
+            console.log(response);
+            if (response.data.success) {
+              console.log('RESPONSE.DATA.SUCCESS');
+              this.setState({
+                name: "",
+                email: "",
+                password: "",
+                password2: "",
+                //below til registerErrors added by Irelis
+                lastName: "",
+                firstName: "",
+                registerErrors: [],
+                isLoading: false
+              });
+      
+              console.log(`Finished! ${JSON.stringify(response.data)}`);
+              //redirect to login page
+              this.props.history.push("/login");
+            } else {
+              console.log('RESPONSE.DATA.FAIL');
+              this.setState({
+                password: "",
+                password2: "",
+                isLoading: false,
+                registerErrors: response.data.message
+              });
+              console.log(JSON.stringify(this.state.registerErrors));
+            }
+    });
+}
 
     componentDidMount() {
         //this.getUser();

@@ -59,7 +59,9 @@ class Register extends Component {
     console.log(user);
 
     axios.post("/users/register", user).then(response => {
+      console.log(response);
       if (response.data.success) {
+        console.log('RESPONSE.DATA.SUCCESS');
         this.setState({
           name: "",
           email: "",
@@ -67,7 +69,7 @@ class Register extends Component {
           password2: "",
           //below til registerErrors added by Irelis
           lastName: "",
-          firstName: "", 
+          firstName: "",
           registerErrors: [],
           isLoading: false
         });
@@ -76,6 +78,7 @@ class Register extends Component {
         //redirect to login page
         this.props.history.push("/login");
       } else {
+        console.log('RESPONSE.DATA.FAIL');
         this.setState({
           password: "",
           password2: "",
