@@ -10,7 +10,6 @@ import MainMenu from "./pages/Extra";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
-import Protected from "./components/ExampleProtectedRoute";
 import Calendar from "./components/Calendar";
 import PageNotFound from "./components/PageNotFound";
 import News from "./pages/News";
