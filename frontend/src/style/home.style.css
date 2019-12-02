@@ -35,8 +35,8 @@ body{
 }
 
 .home-button:hover{
-  background: #358CFF;
-  border: 1px solid  #358CFF;
+  background: rgb(154, 166, 182);
+  border: 1px solid rgb(154, 166, 182);
 }
 
 .home-button2 {
@@ -55,8 +55,8 @@ body{
 }
 
 .home-button2:hover{
-  background: #358CFF;
-  border: 1px solid  #358CFF;
+  background: rgb(154, 166, 182);
+  border: 1px solid rgb(154, 166, 182);
   color: #111B47;
 }
 

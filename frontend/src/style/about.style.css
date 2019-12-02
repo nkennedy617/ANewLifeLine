@@ -46,11 +46,13 @@ body{
     padding-bottom: 42%
 }
 
+
 .about-text-container{
     position: absolute;
     top: 80%;
     width: 70%;
     left: 15%;
+    
 }
 
 .about-textbox-text{
@@ -81,8 +83,8 @@ body{
   }
   
   .register-button:hover{
-    background: #358CFF;
-    border: 1px solid  #358CFF;
+    background: rgb(154, 166, 182);
+    border: 1px solid  rgb(154, 166, 182);
     color: #111B47;
   }
 
