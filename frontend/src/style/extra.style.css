@@ -1,3 +1,9 @@
+@font-face {
+  font-family: SpaceGrotesk-Bold;
+  font-style: normal;
+  src: url(../assets/fonts/SpaceGrotesk-Bold.woff) format('woff');
+}
+
 .extra-container {
   text-align: center;
   color: white;

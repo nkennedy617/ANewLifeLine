@@ -7,7 +7,7 @@
 .dashboard-view-container {
   background: linear-gradient(122.38deg, #358CFF 0%, #DCF9FD 100.91%, #DCF9FD 100.91%);
   color:#525f7f;
-  height: 1000px;
+  height: 1200px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -126,4 +126,10 @@
 .background-image img {
   width: 100%;
   height: auto;
+}
+
+.input-container {
+  display: flex;
+  width: 100%;
+  margin-bottom: 15px;
 }
