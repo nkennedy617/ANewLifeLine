@@ -108,20 +108,19 @@ class App extends Component {
    updateUser(user, firstName, lastName) {
         //console.log(this.state.loggedIn);
         console.log('firstName: ' + firstName);
-        if (firstName != "" && lastName != "")
+        if (firstName != "")
         {
             user.firstName = firstName;
-            user.lastName = lastName;
         }
+        if (lastName != "")
+        {
+          user.lastName = lastName;
+        }
+
         this.setState({ loggedIn: user.loggedIn, user: user });
         
-
-        /*console.log('user first name ' + user.firstName);
-        console.log('user last name ' + user.lastName);*/
-        console.log(user);
-
-        axios.put("/users/register", user).then(response => {
-            console.log(response);
+        /*axios.put("/users", user).then(response => {
+            console.log('PUTTING...');
             if (response.data.success) {
               console.log('RESPONSE.DATA.SUCCESS');
               this.setState({
@@ -149,7 +148,9 @@ class App extends Component {
               });
               console.log(JSON.stringify(this.state.registerErrors));
             }
-    });
+    });*/
+
+    console.log(user);
 }
 
     componentDidMount() {

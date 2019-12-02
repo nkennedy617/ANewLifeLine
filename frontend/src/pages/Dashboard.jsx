@@ -38,8 +38,29 @@ class Dashboard extends React.Component {
   render() {
     
     const { loggedIn, user, userUpdate} = this.props;
-    console.log('USER');
-    console.log(user);
+    //console.log('USER');
+    //console.log(user);
+
+    //console.log("lastname: " + user.lastName);
+    var firstNamePH;
+    if (user.firstName == "" || user.firstName == undefined)
+    {
+      firstNamePH = "First";
+    }
+    else
+    {
+      firstNamePH = user.firstName;
+    }
+    var lastNamePH;
+    if (user.lastName == "" || user.lastName == undefined)
+    {
+      lastNamePH = "Last";
+    }
+    else
+    {
+      lastNamePH = user.lastName;
+    }
+
     return (
       <>
         {loggedIn ? (
@@ -60,12 +81,12 @@ class Dashboard extends React.Component {
                   <input type="text" id="input-username" className="form-control form-control-alternative"
                     placeholder="Username" value={user.email}></input>
                   <label className="form-control-label" htmlFor="input-username">First Name</label>
-                  <input type="text" id="input-firstname" name="getFirst" className="form-control form-control-alternative"
-                    placeholder="First" value={user.firstName}
+                  <input type="text" id="input-firstname" contenteditable="true" name="getFirst" className="form-control form-control-alternative"
+                    placeholder={firstNamePH}//"First" value={user.firstName}
                     ref={(firstName) => firstName = firstName}></input>
                   <label className="form-control-label" htmlFor="input-username">Last Name</label>
                   <input type="text" id="input-lastname" name="getLast" className="form-control form-control-alternative"
-                    placeholder="Last" value={user.lastName}
+                    placeholder={lastNamePH}//"Last" value={user.lastName}
                     ref={(lastName) => lastName = lastName}></input>
                   <label className="form-control-label" htmlFor="input-username">Education</label>
                   <input type="text" id="input-education" name="getEdu" className="form-control form-control-alternative"

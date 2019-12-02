@@ -22,7 +22,10 @@ class Login extends Component {
       password: "",
       redirectTo: "/dashboard",
       loginError: "",
-      isLoading: false
+      isLoading: false,
+      //below added by Irelis
+      firstName: "",
+      lastName: ""
     };
   }
 
@@ -36,13 +39,14 @@ class Login extends Component {
     this.setState({ isLoading: true });
     //This allows us to exchange the default behavior for our custom behavior
     event.preventDefault();
-    const { email, password } = this.state;
+    //firstName and lastName added by Irelis
+    const { email, password , firstName, lastName} = this.state;
     const user = {
       email,
-      password
+      password,
       //below added by Irelis
-      //firstName,
-      //lastName
+      firstName,
+      lastName
     };
 
     this.props.login("/users/login", user, data => {
@@ -50,10 +54,10 @@ class Login extends Component {
         this.setState({
           email: "",
           password: "",
-          isLoading: false
+          isLoading: false,
           //below added by Irelis
-          /*firstName: "",
-          lastName: ""*/
+          firstName: "",
+          lastName: ""
         });
 
         console.log(`Successfully logged in! ${JSON.stringify(data)}`);
@@ -63,6 +67,9 @@ class Login extends Component {
         this.setState({
           email: "",
           password: "",
+          //below added til isLoading by Irelis
+          firstName: "",
+          lastName: "",
           isLoading: false,
           loginError: data.message
         });
