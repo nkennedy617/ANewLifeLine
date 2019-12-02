@@ -1,3 +1,4 @@
+import M from "materialize-css/dist/js/materialize.min.js";
 
 const initState = {
     formError: null,

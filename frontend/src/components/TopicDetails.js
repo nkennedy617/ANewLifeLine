@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import Comment from './Comment'
 import { connect } from 'react-redux'
-import { firestoreConnect } from 'react-redux-firebase'  // do polaczenia componenta z jedna kolekcja czyli z 'topics' w bazie danych
-import { compose } from 'redux' /// zeby sie polaczyc trzeba dodac drugi higher order component przez compoase
+import { firestoreConnect } from 'react-redux-firebase'
+import { compose } from 'redux'
 import { createComment } from '../actions/topicActions'
 import moment from 'moment'
 

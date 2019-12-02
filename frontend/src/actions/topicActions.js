@@ -25,7 +25,7 @@ export const createComment = (comment) => {
         const authorId = getState().firebase.auth.uid;
         firestore.collection('topics').doc(comment.topicId).update({
            
-            comments: firestore.FieldValue.arrayUnion({ //// dodanie do arraya 'comments' objectu
+            comments: firestore.FieldValue.arrayUnion({
                 content: comment.content,
                 id: comment.commentId,
                 idTopic: comment.topicId,

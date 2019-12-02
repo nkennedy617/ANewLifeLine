@@ -1,14 +1,13 @@
 import React from "react";
-import { Redirect } from "react-router-dom";
 import "../style/dashboard.style.css";
-import Navbar from './components/Navbar'
-import Home from './components/Home'
-import CreateTopic from './components/CreateTopic'
-import TopicDetails from './components/TopicDetails'
+import Navbar from '../components/Navbar'
+import Home from '../components/Home'
+import CreateTopic from '../components/CreateTopic'
+import TopicDetails from '../components/TopicDetails'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
 
-class Forum extends Component {
+class Forum extends React.Component {
   render() {
     return (
       <BrowserRouter>
@@ -16,9 +15,9 @@ class Forum extends Component {
           <Navbar />
           <Switch>
 
-            <Route exact path='/' component={Home} />
-            <Route path='/create' component={CreateTopic} />
-            <Route patch='/topic/:id' component={TopicDetails} />
+            <Route exact path='/forum' component={Home} />
+            <Route path='/forum/create' component={CreateTopic} />
+            <Route patch='/forum/topic/:id' component={TopicDetails} />
 
           </Switch>
         </div>
