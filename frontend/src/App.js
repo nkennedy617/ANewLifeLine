@@ -13,6 +13,7 @@ import Dashboard from "./pages/Dashboard";
 import Protected from "./components/ExampleProtectedRoute";
 import Calendar from "./components/Calendar";
 import PageNotFound from "./components/PageNotFound";
+import News from "./pages/News";
 
 import AuthenticatedComponent from "./components/AuthenticatedComponent";
 import Footer from "./components/footer";
@@ -153,7 +154,7 @@ class App extends Component {
         />
     )}
         />
-        <Route path="/protected" component={Protected} />
+        <Route path="/news" component={News} />
         <Route path="/calendar" component={Calendar} />
         </AuthenticatedComponent>
         </Switch>
