@@ -1,12 +1,10 @@
 const config = {
-    apiKey: "AIzaSyBqtT8h6yrhBMiqJ_6Fidc5BMAcpgWisno",
-    authDomain: "nll-forum.firebaseapp.com",
-    databaseURL: "https://nll-forum.firebaseio.com",
-    projectId: "nll-forum",
-    storageBucket: "nll-forum.appspot.com",
-    messagingSenderId: "1008736114069",
-    appId: "1:1008736114069:web:9abbc697ca97b14d6c529c",
-    measurementId: "G-N3J8M6RTLL"
+    apiKey: "AIzaSyDeeRv8YGIujnDwwzS9uMPdgMz1899mRso",
+    authDomain: "forum-9f1d2.firebaseapp.com",
+    databaseURL: "https://forum-9f1d2.firebaseio.com",
+    projectId: "forum-9f1d2",
+    storageBucket: "",
+    messagingSenderId: "473004542850"
 };
 
 export default config;

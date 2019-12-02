@@ -120,8 +120,8 @@ class App extends Component {
         />
         <Switch>
         <Route path="/" exact component={Home} />
-        <Route path="/mainmenu" component={Forum} />
-        <Route path="/forum" component={Forum}/>
+        <Route path="/mainmenu" component={MainMenu} />
+        <Route path="/news" component={Forum}/>
         <Route path="/users/register" component={Register} />
         <Route
         path="/users/login"
