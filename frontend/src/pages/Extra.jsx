@@ -4,13 +4,14 @@ import "../style/about.style.css";
 
 const MainMenu = () => {
     return (
-        <div>
+        <div className="tips-container">
             <p></p>
             <div className="about-image">
                 <img src={require('../assets/tips-page-image.png')} class="center" />
-                <div className="intro-textbox-title">A Getting Started Guide</div>
             </div>
             <div className="about-text-container">
+                <div className="intro-textbox-title">A Getting Started Guide</div>
+                <p></p>
                 <div className="about-textbox-text"> New Life Line can help you, let us show you how!
     This page is a step by step guide of how your users can work with new life like, what they should expect (...this could be bullet points)
     We will help you break the cycle </div>
@@ -31,7 +32,7 @@ const MainMenu = () => {
                     New Life Line Support structure is based on Felons helping Felons</div>
                 <div className="about-buttons-container">
                     <Link to="/users/register">
-                        <button className="register-button">Sign Up</button>
+                        <button className="register-button">Sign me up!</button>
                     </Link>
                 </div>
             </div>
