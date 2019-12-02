@@ -12,6 +12,7 @@ import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
 import Protected from "./components/ExampleProtectedRoute";
 import Calendar from "./components/Calendar";
+import DecisionTree from "./pages/DecisionTree"
 
 import AuthenticatedComponent from "./components/AuthenticatedComponent";
 class App extends Component {
@@ -152,6 +153,7 @@ class App extends Component {
         />
         <Route path="/protected" component={Protected} />
         <Route path="/calendar" component={Calendar} />
+            <Route path="/decisiontree" component={DecisionTree} />
         </AuthenticatedComponent>
         </Switch>
         </Router>
