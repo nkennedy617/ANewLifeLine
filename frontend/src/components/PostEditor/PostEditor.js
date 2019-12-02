@@ -28,10 +28,6 @@ class PostEditor extends Component {
         })
     }
 
-    removePost(){
-        this.props.remove()
-    };
-
     render() {
         return (
             <div className="card post-editor">

@@ -30,6 +30,10 @@ class Messages extends Component {
         this.databaseRef.push().set(postToSave);
     }
 
+    deletePost(){
+        this.databaseRef.delete();
+         }
+
     updateLocalState(response) {
         const posts = this.state.posts;
         const brokenDownPost = response.postBody.split(/[\r\n]/g);
@@ -45,7 +49,7 @@ class Messages extends Component {
                 {
                     this.state.posts.map((postBody, idx) => {
                     return (
-                        <Posts key={idx} postBody={postBody}/>
+                        <Posts key={idx} postBody={postBody} deletePost={this.deletePost}/>
                         )
                     })
                 }
