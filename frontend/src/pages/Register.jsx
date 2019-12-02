@@ -115,7 +115,7 @@ class Register extends Component {
             <div className="form-group">
               <div className="input-group input-group-alternative">
                 <div className="input-group-prepend">
-                  <span className="input-group-text"><i className="ni ni-hat-3"></i></span>
+                  <span className="input-group-text"><i className="ni ni-circle-08"></i></span>
                 </div>
                 <input
                   type="text"
