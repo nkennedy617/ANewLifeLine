@@ -1,9 +1,10 @@
 const express = require("express");
-const bodyParser = require("body-parser");
 const mongooseSetup = require("./config/database");
+const bodyParser = require("body-parser");
+const passport = require("passport");
+
 const session = require("express-session");
 const MongoStore = require("connect-mongo")(session);
-const passport = require("passport");
 const index = require("./routes/index");
 const users = require("./routes/users");
 
@@ -14,7 +15,9 @@ const pdf = require("html-pdf");
 const pdfTemplate = require("./documents");
 //pdf
 
+
 mongooseSetup.start(); //starts the database
+
 //Passport Config
 require("./config/passport")(passport);
 

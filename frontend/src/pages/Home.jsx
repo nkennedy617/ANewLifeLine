@@ -50,7 +50,6 @@ const Home = () => {
                     <div className="landing-tile-text">About Steven...</div>
                 </div>
             </div>
-            <div className="home-footer"></div>
         </div>
     );
 };

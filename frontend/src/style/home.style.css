@@ -35,14 +35,14 @@ body{
 }
 
 .home-button:hover{
-  background: #358CFF;
-  border: 1px solid  #358CFF;
+  background: rgb(154, 166, 182);
+  border: 1px solid rgb(154, 166, 182);
 }
 
 .home-button2 {
   position: relative;
   top: 0%;
-  left: 20%;
+  left: 30%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   outline: none;
@@ -55,8 +55,8 @@ body{
 }
 
 .home-button2:hover{
-  background: #358CFF;
-  border: 1px solid  #358CFF;
+  background: rgb(154, 166, 182);
+  border: 1px solid rgb(154, 166, 182);
   color: #111B47;
 }
 
@@ -171,13 +171,13 @@ body{
 }
 .landing-tile-container2{
   position: absolute;
-  left: 50%;
+  right: 37.5%;
   width: 300px;
   height: 100%;
 }
 .landing-tile-container3{
   position: absolute;
-  left: 100%;
+  right: 0%;
   width: 300px;
   height: 100%;
 }

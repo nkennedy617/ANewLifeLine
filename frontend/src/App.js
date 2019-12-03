@@ -14,8 +14,11 @@ import Protected from "./components/ExampleProtectedRoute";
 import Calendar from "./components/Calendar";
 import DecisionTree from "./pages/DecisionTree"
 import ResumeBuilder from "./components/ResumeBuilder"
+import Admin from "./pages/Admin";
+import PageNotFound from "./components/PageNotFound";
 
 import AuthenticatedComponent from "./components/AuthenticatedComponent";
+import Footer from "./components/footer";
 class App extends Component {
     constructor(props) {
         super(props);
@@ -123,43 +126,84 @@ class App extends Component {
         //this.getUser();
     }
     render() {
-        return (
-            <Router history={history}>
-            <NavBar
-        user={this.state.user}
-        loggedIn={this.state.loggedIn}
-        updateUser={this.updateUser}
-        logout={this.logout}
-        />
-        <Switch>
-        <Route path="/" exact component={Home} />
-        <Route path="/mainmenu" component={MainMenu} />
-        <Route path="/users/register" component={Register} />
-        <Route
-        path="/users/login"
-        render={() => (
-        <Login login={this.login} loggedIn={this.state.loggedIn} />
-    )}
-        />
-        <AuthenticatedComponent verify={this.verify}>
-    <Route
-        path="/dashboard"
-        render={() => (
-        <Dashboard
-        loggedIn={this.state.loggedIn}
-        user={this.state.user}
-        addInformation = {this.updateUser}
-        />
-    )}
-        />
-        <Route path="/protected" component={Protected} />
-        <Route path="/calendar" component={Calendar} />
-            <Route path="/decisiontree" component={DecisionTree} />
+
+        if (this.state.user.role == "admin") {
+            console.log("is admin");
+            return (
+                <Router history={history}>
+                    <NavBar
+                        user={this.state.user}
+                        loggedIn={this.state.loggedIn}
+                        updateUser={this.updateUser}
+                        logout={this.logout}
+                    />
+                    <Switch>
+                        <Route path="/" exact component={Home}/>
+                        <Route path="/mainmenu" component={MainMenu}/>
+                        <Route path="/users/register" component={Register}/>
+                        <Route
+                            path="/users/login"
+                            render={() => (
+                                <Login login={this.login} loggedIn={this.state.loggedIn}/>
+                            )}
+                        />
+                        <AuthenticatedComponent verify={this.verify}>
+                            <Route
+                                path="/dashboard"
+                                render={() => (
+                                    <Dashboard
+                                        loggedIn={this.state.loggedIn}
+                                        user={this.state.user}
+                                    />
+                                )}
+                            />
+                            <Route path="/Admin" component={Admin}/>
+                            <Route path="/calendar" component={Calendar}/>
+                               <Route path="/decisiontree" component={DecisionTree} />
             <Route path="/ResumeBuilder" component={ResumeBuilder} />
-        </AuthenticatedComponent>
-        </Switch>
-        </Router>
-    );
+                        </AuthenticatedComponent>
+                    </Switch>
+                </Router>
+            );
+        }
+        else {
+            return (
+                <Router history={history}>
+                    <NavBar
+                        user={this.state.user}
+                        loggedIn={this.state.loggedIn}
+                        updateUser={this.updateUser}
+                        logout={this.logout}
+                    />
+                    <Switch>
+                        <Route path="/" exact component={Home}/>
+                        <Route path="/mainmenu" component={MainMenu}/>
+                        <Route path="/users/register" component={Register}/>
+                        <Route
+                            path="/users/login"
+                            render={() => (
+                                <Login login={this.login} loggedIn={this.state.loggedIn}/>
+                            )}
+                        />
+                        <AuthenticatedComponent verify={this.verify}>
+                            <Route
+                                path="/dashboard"
+                                render={() => (
+                                    <Dashboard
+                                        loggedIn={this.state.loggedIn}
+                                        user={this.state.user}
+                                    />
+                                )}
+                            />
+                            <Route path="/protected" component={Protected}/>
+                            <Route path="/calendar" component={Calendar}/>
+                               <Route path="/decisiontree" component={DecisionTree} />
+            <Route path="/ResumeBuilder" component={ResumeBuilder} />
+                        </AuthenticatedComponent>
+                    </Switch>
+                </Router>
+            );
+        }
     }
 }
 

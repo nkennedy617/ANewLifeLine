@@ -71,7 +71,6 @@ class Login extends Component {
           password: "",
           isLoading: false
         });
-
         console.log(`Finished! ${JSON.stringify(response.data)}`);
         //redirect to login page
         this.props.history.push("/dashboard");
@@ -174,12 +173,6 @@ class Login extends Component {
             </div>
             <div className="login-input-container">
               <input type="submit" value="Login" className="btn btn-primary my-4" />
-            </div>
-            <div className="line1"> </div>
-            <p></p>
-            <h6>Or log in with</h6>
-            <div className="login-input-container">
-              <input type="submit" value="Google" className="btn btn-primary" />
             </div>
           </form>
         </div>

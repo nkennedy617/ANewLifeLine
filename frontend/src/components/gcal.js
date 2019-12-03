@@ -13,7 +13,7 @@ export function getEvents (callback) {
                 JSON.parse(resp.text).items.map((event) => {
                     events.push({
                         start: new Date(event.start.date || event.start.dateTime),
-                        end: new Date (event.end.date || event.end.dateTime),
+                        end: new Date(event.end.date || event.end.dateTime),
                         title: event.summary,
                     })
                 })
