@@ -1,7 +1,6 @@
 import React, {Component} from "react";
 import Posts from "../Posts/Posts";
 import PostEditor from '../PostEditor/PostEditor';
-import '../Posts/Posts.css';
 
 class Messages extends Component {
 

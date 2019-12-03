@@ -1,6 +1,5 @@
 import React from "react";
 import './Posts.css';
-import PostEditor from '../PostEditor/PostEditor.js'
 
 const Posts = (props) => (
         <div className="card post-body">
