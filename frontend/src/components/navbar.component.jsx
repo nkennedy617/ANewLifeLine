@@ -55,6 +55,16 @@ const NavBar = props => {
                     Calendar
                     </Link>
                 </li>
+                <li className="navbar-item">
+                              <Link to="/resumebuilder" className="nav-link">
+                                    Resume Builder
+                                </Link>
+                            </li>
+                            <li className="navbar-item">
+                                <Link to="/decisiontree" className="nav-link">
+                                    Assessment
+                                </Link>
+                            </li>
                 <div class = "nav-right">
                 <ul class="nav navbar-nav navbar-right">
                   <li className="navbar-item" >

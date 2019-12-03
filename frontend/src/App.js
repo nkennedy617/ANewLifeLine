@@ -10,10 +10,13 @@ import MainMenu from "./pages/Extra";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
+import DecisionTree from "./pages/DecisionTree";
+import ResumeBuilder from "./components/ResumeBuilder";
 import Calendar from "./components/Calendar";
 import Admin from "./pages/Admin";
 import PageNotFound from "./components/PageNotFound";
 import News from "./pages/News";
+
 
 import AuthenticatedComponent from "./components/AuthenticatedComponent";
 import Footer from "./components/footer";
@@ -157,6 +160,8 @@ class App extends Component {
                             <Route path="/Admin" component={Admin}/>
                               <Route path="/announcements" component={News} />
                             <Route path="/calendar" component={Calendar}/>
+                            <Route path="/decisionTree" component={DecisionTree} />
+                             <Route path="/resumebuilder" component={ResumeBuilder} />
                         </AuthenticatedComponent>
                     </Switch>
                 </Router>
@@ -193,6 +198,8 @@ class App extends Component {
                             />
                             <Route path="/announcements" component={News} />
                             <Route path="/calendar" component={Calendar}/>
+                            <Route path="/decisionTree" component={DecisionTree} />
+                             <Route path="/resumebuilder" component={ResumeBuilder} />
                         </AuthenticatedComponent>
                     </Switch>
                 </Router>
