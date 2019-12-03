@@ -4,16 +4,31 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
     "concurrently": "^5.0.0",
     "connect-mongo": "^3.1.0",
+    "cookie-parser": "^1.4.4",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-session": "^1.17.0",
+    "is-empty": "^1.2.0",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.15",
     "moment": "^2.24.0",
     "mongodb": "^3.3.4-rc0",
+    "mongoose": "^5.7.12",
+    "mongoose-unique-validator": "^2.0.3",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
+    "passport-local": "^1.0.0",
     "react-big-calendar": "^0.23.0",
     "react-calendar": "^2.19.2",
-    "react-schedule-calendar": "^0.22.8"
+    "react-schedule-calendar": "^0.22.8",
+    "validator": "^12.1.0"
   },
   "devDependencies": {
+    "react-admin": "^3.0.0",
     "superagent": "^5.1.0"
   },
   "scripts": {
