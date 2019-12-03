@@ -71,7 +71,6 @@ class Login extends Component {
           password: "",
           isLoading: false
         });
-
         console.log(`Finished! ${JSON.stringify(response.data)}`);
         //redirect to login page
         this.props.history.push("/dashboard");
@@ -125,9 +124,10 @@ class Login extends Component {
     return (
 
       <div className="login-view-container">
-          <div className="triangle-bottomright"></div>
+
+        <div className="triangle-bottomright"></div>
         <div className="login-container">
-            <h1>Login</h1>
+          <h1>Login</h1>
 
           <div className="login-input-container">
 
@@ -139,43 +139,38 @@ class Login extends Component {
             className="login-form-container"
           >
             <div className="form-group">
-                <div className="input-group input-group-alternative">
-                    <div className="input-group-prepend">
-                        <span className="input-group-text"><i className="ni ni-email-83"></i></span>
-                    </div>
-              <input
-                type="email"
-                name="email"
-                placeholder="Email"
-                required
-                className="form-control"
-                value={this.state.email}
-                onChange={e => this.onChange(e)}
-              />
-            </div>
-            </div>
-
-              <div className="form-group">
-                  <div className="input-group input-group-alternative">
-                      <div className="input-group-prepend">
-                          <span className="input-group-text"><i className="ni ni-lock-circle-open"></i></span>
-                      </div>
-                      <input
-                          class="form-control"
-                          type="password"
-                          name="password"
-                          placeholder="Password"
-                          required
-                          value={this.state.password}
-                          onChange={e => this.onChange(e)}
-                      />
-                  </div>
+              <div className="input-group input-group-alternative">
+                <div className="input-group-prepend">
+                  <span className="input-group-text"><i className="ni ni-email-83"></i></span>
+                </div>
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Email"
+                  required
+                  className="form-control"
+                  value={this.state.email}
+                  onChange={e => this.onChange(e)}
+                />
               </div>
+            </div>
 
-
-
-
-
+            <div className="form-group">
+              <div className="input-group input-group-alternative">
+                <div className="input-group-prepend">
+                  <span className="input-group-text"><i className="ni ni-lock-circle-open"></i></span>
+                </div>
+                <input
+                  class="form-control"
+                  type="password"
+                  name="password"
+                  placeholder="Password"
+                  required
+                  value={this.state.password}
+                  onChange={e => this.onChange(e)}
+                />
+              </div>
+            </div>
             <div className="login-input-container">
               <input type="submit" value="Login" className="btn btn-primary my-4" />
             </div>

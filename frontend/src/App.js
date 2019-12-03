@@ -13,8 +13,10 @@ import Dashboard from "./pages/Dashboard";
 import Protected from "./components/ExampleProtectedRoute";
 import Calendar from "./components/Calendar";
 import Admin from "./pages/Admin";
+import PageNotFound from "./components/PageNotFound";
 
 import AuthenticatedComponent from "./components/AuthenticatedComponent";
+import Footer from "./components/footer";
 class App extends Component {
     constructor(props) {
         super(props);
@@ -104,6 +106,18 @@ class App extends Component {
     updateUser(user) {
         console.log(this.state.loggedIn);
         this.setState({ loggedIn: user.loggedIn, user: user });
+    }
+
+   updateUser(user, firstName, lastName) {
+        //console.log(this.state.loggedIn);
+        console.log('firstName: ' + firstName);
+        this.setState({ loggedIn: user.loggedIn, user: user });
+        if (firstName != null && lastName != null)
+        {
+            this.setState({firstName: firstName, lastName: lastName});
+        }
+
+        console.log('user first name ' + user.firstName);
     }
 
     componentDidMount() {

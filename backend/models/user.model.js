@@ -23,8 +23,17 @@ const userSchema = mongoose.Schema({
     role: {
         type: String,
         default: 'user'
-    }
-
+    },
+  lastName: {
+    type: String,
+    required: false
+    default: ''
+  },
+  firstName: {
+    type: String,
+    required: false
+    default: ''
+  }
 });
 
 userSchema.plugin(uniqueValidator);
