@@ -153,7 +153,7 @@ class App extends Component {
         />
     )}
         />
-        <Route path="/news" component={News} />
+        <Route path="/announcements" component={News} />
         <Route path="/calendar" component={Calendar} />
         </AuthenticatedComponent>
         </Switch>

@@ -45,8 +45,8 @@ const NavBar = props => {
                 </Link>
                 </li>
                 <li className="navbar-item">
-                  <Link to="/Forum" className="nav-link">
-                    Forum
+                  <Link to="/announcements" className="nav-link">
+                    Announcements
                 </Link>
                 </li>
                 <li className="navbar-item">
