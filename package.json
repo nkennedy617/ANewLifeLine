@@ -14,6 +14,7 @@
     "express": "^4.17.1",
     "express-session": "^1.17.0",
     "file-saver": "^2.0.2",
+    "firebase": "^7.5.0",
     "gojs": "^2.1.2",
     "gojs-react": "^1.0.4",
     "html-pdf": "^2.2.0",
@@ -42,8 +43,6 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "concurrently \"npm --prefix ./backend run dev\" \"npm --prefix ./frontend run start \" ",
     "heroku-postbuild": "cd frontend && npm install && npm run build"
-
-
   },
   "author": "",
   "license": "ISC"
