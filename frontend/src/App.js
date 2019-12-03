@@ -10,7 +10,6 @@ import MainMenu from "./pages/Extra";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
-import Protected from "./components/ExampleProtectedRoute";
 import DecisionTree from "./pages/DecisionTree";
 import ResumeBuilder from "./components/ResumeBuilder";
 import Calendar from "./components/Calendar";
