@@ -4,6 +4,8 @@ import mitchTree from "d3-mitch-tree";
 import "./d3-mitch-tree.min.css";
 // due to name length restriction, I rename the actual theme css file
 import "./d3-mitch-tree-theme-def.min.css";
+import "../style/decisiontree.style.css";
+
 //import "./styles.css";
 
 // this works too
@@ -160,6 +162,7 @@ export default class DecisionTree extends React.Component {
         let nodes = this.treePlugin.getNodes();
         nodes.forEach((node, index, arr) => this.treePlugin.expand(node));
         this.treePlugin.update(this.treePlugin.getRoot());
+
     };
 
     render() {
