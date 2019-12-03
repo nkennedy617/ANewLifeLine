@@ -105,9 +105,9 @@ class App extends Component {
         this.setState({ loggedIn: user.loggedIn, user: user });
     }
 
-   updateUser(user, firstName, lastName) {
+   updateUser(user, firstName, lastName, education, employment, institution) {
         //console.log(this.state.loggedIn);
-        console.log('firstName: ' + firstName);
+        //console.log('firstName: ' + firstName);
         if (firstName != "")
         {
             user.firstName = firstName;
@@ -116,10 +116,26 @@ class App extends Component {
         {
           user.lastName = lastName;
         }
+        if (education != "")
+        {
+            user.education = education;
+        }
+        if (employment != "")
+        {
+            user.employment = employment;
+        }
+        if (institution != "")
+        {
+            user.institution = institution;
+        }
 
         this.setState({ loggedIn: user.loggedIn, user: user });
+
+    axios.put("/dashboard", user)
+    .then(res => console.log("Object successfully updated: ", res.data))
+	.catch((error) => console.log(error));
         
-        /*axios.put("/users", user).then(response => {
+        /*axios.put("/user_profiles", user).then(response => {
             console.log('PUTTING...');
             if (response.data.success) {
               console.log('RESPONSE.DATA.SUCCESS');

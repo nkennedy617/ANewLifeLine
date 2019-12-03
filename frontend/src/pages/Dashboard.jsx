@@ -60,6 +60,33 @@ class Dashboard extends React.Component {
     {
       lastNamePH = user.lastName;
     }
+    var edPH;
+    if (user.education == "" || user.education == undefined)
+    {
+      edPH = "Education";
+    }
+    else
+    {
+      edPH = user.education;
+    }
+    var institutionPH;
+    if (user.institution == "" || user.institution == undefined)
+    {
+      institutionPH = "(This information will not be public)";
+    }
+    else
+    {
+      institutionPH = user.institution;
+    }
+    var employmentPH;
+    if (user.employment == "" || user.employment == undefined)
+    {
+      employmentPH = "(This information will not be public)";
+    }
+    else
+    {
+      employmentPH = user.employment;
+    }
 
     return (
       <>
@@ -90,17 +117,17 @@ class Dashboard extends React.Component {
                     ref={(lastName) => lastName = lastName}></input>
                   <label className="form-control-label" htmlFor="input-username">Education</label>
                   <input type="text" id="input-education" name="getEdu" className="form-control form-control-alternative"
-                    placeholder="Education" value={user.education}
+                    placeholder={edPH} //value={user.education}
                     ref={(education) => education = education}></input>
                     <label className="form-control-label" htmlFor="input-username">Employment Informatiion</label>
-                    <textarea rows="4" class="form-control form-control-alternative" placeholder="(This information will not be public)"></textarea>
+                    <textarea rows="4" class="form-control form-control-alternative" id="input-employment" placeholder={employmentPH}></textarea>
                     <div class="form-group focused">
                     <label className="form-control-label" htmlFor="input-username">Institutional Information</label>
-                    <textarea rows="4" class="form-control form-control-alternative" placeholder="(This information will not be public)"></textarea>
+                    <textarea rows="4" class="form-control form-control-alternative" id="input-institution" placeholder={institutionPH}></textarea>
                   </div>
                   <p></p>
                 </div>
-                <button className="btn btn-primary" type="button" onClick={() => userUpdate(user, document.getElementById('input-firstname').value, document.getElementById('input-lastname').value)}>
+                <button className="btn btn-primary" type="button" onClick={() => userUpdate(user, document.getElementById('input-firstname').value, document.getElementById('input-lastname').value, document.getElementById('input-education').value, document.getElementById('input-employment').value, document.getElementById('input-institution').value)}>
                     <i>Edit</i>
                   </button>
               </div>

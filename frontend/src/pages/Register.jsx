@@ -18,10 +18,10 @@ class Register extends Component {
       password: "",
       password2: "",
       registerErrors: [],
-      isLoading: "",
+      isLoading: ""
       //below added by Irelis
-      firstName: "",
-      lastName: ""
+      /*firstName: "",
+      lastName: ""*/
     };
   }
 
@@ -39,7 +39,7 @@ class Register extends Component {
 
     //Object destructuring
     //firstName and lastName added by Irelis
-    const { name, email, password, password2, firstName, lastName } = this.state;
+    const { name, email, password, password2 } = this.state;
 
     //TODO: Add frontend validation?
 
@@ -48,10 +48,10 @@ class Register extends Component {
       name,
       email,
       password,
-      password2,
+      password2
       //below added by Irelis
-      firstName,
-      lastName
+      /*firstName,
+      lastName*/
     };
 
     //this statement is only for development purposes
@@ -68,8 +68,8 @@ class Register extends Component {
           password: "",
           password2: "",
           //below til registerErrors added by Irelis
-          lastName: "",
-          firstName: "",
+          /*lastName: "",
+          firstName: "",*/
           registerErrors: [],
           isLoading: false
         });

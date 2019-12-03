@@ -16,11 +16,26 @@ const userSchema = mongoose.Schema({
   },
   lastName: {
     type: String,
+    default: ""
     //required: true
   },
   firstName: {
     type: String,
+    default: ""
     //required: true
+  },
+  education: {
+    type: String,
+    default: ""
+  },
+  employment:
+  {
+    type: String,
+    default: ""
+  },
+  institution:{
+    type: String,
+    default: ""
   },
   Date: {
     type: Date,
