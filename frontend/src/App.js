@@ -10,10 +10,10 @@ import MainMenu from "./pages/Extra";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
-import Protected from "./components/ExampleProtectedRoute";
 import Calendar from "./components/Calendar";
 import Admin from "./pages/Admin";
 import PageNotFound from "./components/PageNotFound";
+import News from "./pages/News";
 
 import AuthenticatedComponent from "./components/AuthenticatedComponent";
 import Footer from "./components/footer";
@@ -155,6 +155,7 @@ class App extends Component {
                                 )}
                             />
                             <Route path="/Admin" component={Admin}/>
+                              <Route path="/announcements" component={News} />
                             <Route path="/calendar" component={Calendar}/>
                         </AuthenticatedComponent>
                     </Switch>
@@ -190,7 +191,7 @@ class App extends Component {
                                     />
                                 )}
                             />
-                            <Route path="/protected" component={Protected}/>
+                            <Route path="/announcements" component={News} />
                             <Route path="/calendar" component={Calendar}/>
                         </AuthenticatedComponent>
                     </Switch>
