@@ -36,6 +36,7 @@ const NavBar = props => {
                   Login
                 </Link>
               </li>
+
             </>
           ) : (
               <>
@@ -54,14 +55,17 @@ const NavBar = props => {
                     Calendar
                     </Link>
                 </li>
+                <div class = "nav-right">
+                <ul class="nav navbar-nav navbar-right">
+                  <li className="navbar-item" >
+                    <Logout logout={logout} />
+                  </li>
+                </ul>
+                </div>
               </>
             )}
         </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <li className="navbar-item" >
-            <Logout logout={logout} />
-          </li>
-        </ul>
+
       </div>
     </nav>
   );
