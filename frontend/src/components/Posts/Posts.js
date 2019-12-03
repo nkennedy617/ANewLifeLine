@@ -7,7 +7,7 @@ const Posts = (props) => (
             <div className="card-body">
                 {
                     props.postBody.map((postPart, idx) => (
-                        <div key={idx}>{postPart}</div>
+                        <div className="post-text" key={idx}>{postPart}</div>
                     ))
                 }
             </div>

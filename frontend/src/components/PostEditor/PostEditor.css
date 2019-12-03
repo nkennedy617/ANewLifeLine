@@ -1,5 +1,10 @@
 .post-editor {
-    margin: 1em 20%
+    margin: 1em 20%;
+    height:auto;
+}
+
+.card-body{
+    height:auto;
 }
 
 .post-editor-button {
@@ -10,5 +15,8 @@
 @media(max-width: 300px) {
     .post-editor {
         margin: 1em;
+        
     }
+
+
 }

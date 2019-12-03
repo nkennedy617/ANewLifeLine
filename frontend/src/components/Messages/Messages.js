@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import Posts from "../Posts/Posts";
 import PostEditor from '../PostEditor/PostEditor';
-
+import '../Posts/Posts.css';
 
 class Messages extends Component {
 
@@ -49,7 +49,7 @@ class Messages extends Component {
                 {
                     this.state.posts.map((postBody, idx) => {
                     return (
-                        <Posts key={idx} postBody={postBody} deletePost={this.deletePost}/>
+                        <Posts class='post-text' key={idx} postBody={postBody} deletePost={this.deletePost}/>
                         )
                     })
                 }

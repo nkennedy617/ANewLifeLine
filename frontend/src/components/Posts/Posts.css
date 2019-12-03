@@ -1,10 +1,12 @@
 .post-body {
-    margin: 1em 20%
+    margin: 1em 20%;
 }
+
 
 @media(max-width: 300px) {
     .post-body {
         margin: 1em;
+
     }
     
 }
@@ -13,4 +15,8 @@
 .post-delete-button {
     float: right;
     margin-top: 1em;
+}
+
+.post-text{
+color:black;
 }
