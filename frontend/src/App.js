@@ -11,7 +11,10 @@ import Register from "./pages/Register";
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
 import Protected from "./components/ExampleProtectedRoute";
+import DecisionTree from "./pages/DecisionTree";
+import ResumeBuilder from "./components/ResumeBuilder";
 import Calendar from "./components/Calendar";
+
 
 import AuthenticatedComponent from "./components/AuthenticatedComponent";
 class App extends Component {
@@ -152,6 +155,8 @@ class App extends Component {
         />
         <Route path="/protected" component={Protected} />
         <Route path="/calendar" component={Calendar} />
+            <Route path="/decisionTree" component={DecisionTree} />
+            <Route path="/resumebuilder" component={ResumeBuilder} />
         </AuthenticatedComponent>
         </Switch>
         </Router>
