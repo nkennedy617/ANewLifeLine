@@ -1,7 +1,19 @@
+  
 .navbar-container {
-  background-color: #e3f2fd;
+  background-color: #fff;
 
 }
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+/* https://www.w3schools.com/howto/howto_js_navbar_sticky.asp */
 
 .navbar{
   min-height: 50px;
@@ -10,4 +22,9 @@
 
 nav a.hover {
   color: #3180ec;
+}
+
+.nav-right{
+  position: absolute;
+  right: 5%;
 }

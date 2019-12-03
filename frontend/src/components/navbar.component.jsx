@@ -4,63 +4,59 @@ import Logout from "./logout.component";
 import "../style/navbar.style.css";
 
 const NavBar = props => {
-    const logout = () => {
-        props.logout("/users/logout");
-    };
-    return (
-        <nav className="navbar navbar-light bg-light navbar-expand-lg">
-            <Link to="/" exact className="navbar-brand">
-                <img src={require('../assets/navbar-logo.png')} />
+  const logout = () => {
+    props.logout("/users/logout");
+  };
+  return (
+    <nav className="navbar navbar-light bg-white navbar-expand-lg">
+      <Link to="/" exact className="navbar-brand">
+        <img src={require('../assets/navbar-logo.png')} />
+      </Link>
+      <div className="collapse navbar-collapse">
+        <ul className="navbar-nav mr-auto">
+          <li className="navbar-item">
+            <Link to="/" exact className="nav-link">
+              Home
             </Link>
-            <div className="collapse navbar-collapse">
-                <ul className="navbar-nav mr-auto">
-                    <li className="navbar-item">
-                        <Link to="/" exact className="nav-link">
-                            Home
-                        </Link>
-                    </li>
-                    <li className="navbar-item">
-                        <Link to="/mainmenu" className="nav-link">
-                            About
-                        </Link>
-                    </li>
-                    {!props.loggedIn ? (
-                        <>
-                            <li className="navbar-item">
-                                <Link to="/users/register" className="nav-link">
-                                    Register
-                                </Link>
-                            </li>
-                            <li className="navbar-item">
-                                <Link to="/users/login" className="nav-link">
-                                    Login
-                                </Link>
-                            </li>
-                        </>
-                    ) : (
-                        <>
-                            <li className="navbar-item">
-                                <Link to="/dashboard" className="nav-link">
-                                    Dashboard
-                                </Link>
-                            </li>
-                            <li className="navbar-item">
-                                <Link to="/Forum" className="nav-link">
-                                    Forum
-                                </Link>
-                            </li>
-                            <li className="navbar-item">
-                                <Link to="/calendar" className="nav-link">
-                                    Calendar
-                                </Link>
-                            </li>
-                            <li className="navbar-item">
-                                <Link to="/tips" className="nav-link">
-                                    Tips
-                                </Link>
-                            </li>
-                            <li className="navbar-item">
-                                <Link to="/resumebuilder" className="nav-link">
+          </li>
+          <li className="navbar-item">
+            <Link to="/mainmenu" className="nav-link">
+              Tips
+            </Link>
+          </li>
+          {!props.loggedIn ? (
+            <>
+              <li className="navbar-item">
+                <Link to="/users/register" className="nav-link">
+                  Register
+                </Link>
+              </li>
+              <li className="navbar-item">
+                <Link to="/users/login" className="nav-link">
+                  Login
+                </Link>
+              </li>
+
+            </>
+          ) : (
+              <>
+                <li className="navbar-item">
+                  <Link to="/dashboard" className="nav-link">
+                    Dashboard
+                </Link>
+                </li>
+                <li className="navbar-item">
+                  <Link to="/announcements" className="nav-link">
+                    Announcements
+                </Link>
+                </li>
+                <li className="navbar-item">
+                  <Link to="/calendar" className="nav-link">
+                    Calendar
+                    </Link>
+                </li>
+                <li className="navbar-item">
+                              <Link to="/resumebuilder" className="nav-link">
                                     Resume Builder
                                 </Link>
                             </li>
@@ -69,17 +65,20 @@ const NavBar = props => {
                                     Assessment
                                 </Link>
                             </li>
-                        </>
-                    )}
-                </ul>
+                <div class = "nav-right">
                 <ul class="nav navbar-nav navbar-right">
-                    <li className="navbar-item" >
-                        <Logout logout={logout} />
-                    </li>
+                  <li className="navbar-item" >
+                    <Logout logout={logout} />
+                  </li>
                 </ul>
-            </div>
-        </nav>
-    );
+                </div>
+              </>
+            )}
+        </ul>
+
+      </div>
+    </nav>
+  );
 };
 
 export default NavBar;
