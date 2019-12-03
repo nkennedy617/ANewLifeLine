@@ -12,6 +12,8 @@ import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
 import Protected from "./components/ExampleProtectedRoute";
 import Calendar from "./components/Calendar";
+import DecisionTree from "./pages/DecisionTree"
+import ResumeBuilder from "./components/ResumeBuilder"
 import Admin from "./pages/Admin";
 import PageNotFound from "./components/PageNotFound";
 
@@ -124,6 +126,7 @@ class App extends Component {
         //this.getUser();
     }
     render() {
+
         if (this.state.user.role == "admin") {
             console.log("is admin");
             return (
@@ -156,6 +159,8 @@ class App extends Component {
                             />
                             <Route path="/Admin" component={Admin}/>
                             <Route path="/calendar" component={Calendar}/>
+                               <Route path="/decisiontree" component={DecisionTree} />
+            <Route path="/ResumeBuilder" component={ResumeBuilder} />
                         </AuthenticatedComponent>
                     </Switch>
                 </Router>
@@ -192,6 +197,8 @@ class App extends Component {
                             />
                             <Route path="/protected" component={Protected}/>
                             <Route path="/calendar" component={Calendar}/>
+                               <Route path="/decisiontree" component={DecisionTree} />
+            <Route path="/ResumeBuilder" component={ResumeBuilder} />
                         </AuthenticatedComponent>
                     </Switch>
                 </Router>
