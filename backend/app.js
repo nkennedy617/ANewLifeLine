@@ -8,14 +8,6 @@ const MongoStore = require("connect-mongo")(session);
 const index = require("./routes/index");
 const users = require("./routes/users");
 
-
-//pdf builder
-const cors = require("cors");
-const pdf = require("html-pdf");
-const pdfTemplate = require("./documents");
-//pdf
-
-
 mongooseSetup.start(); //starts the database
 
 //Passport Config
@@ -63,20 +55,5 @@ app.use((req, res, next) => {
 //Routes
 app.use("/", index);
 app.use("/users", users);
-
-//post pdf generator
-app.post('/create-pdf', (req, res) => {
-    pdf.create(pdfTemplate(req.body), {}).toFile('result.pdf', (err) => {
-        if (err){
-            res.send(Promise.reject())
-        }
-        return Promise.resolve();
-    });
-});
-
-// get pdf
-app.get('fetch-pdf', (req, res) => {
-    res.sendFile(`${__dirname/result.pdf}`);
-})
 
 app.listen(PORT, () => console.log(`Server started on port ${PORT}`));

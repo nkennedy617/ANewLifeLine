@@ -54,21 +54,6 @@ const NavBar = props => {
                     Calendar
                     </Link>
                 </li>
-                <li className="navbar-item">
-                  <Link to="/tips" className="nav-link">
-                    Tips
-                    </Link>
-                </li>
-                  <li className="navbar-item">
-                      <Link to="/resumebuilder" className="nav-link">
-                          Resume Builder
-                      </Link>
-                  </li>
-                  <li className="navbar-item">
-                      <Link to="/decisiontree" className="nav-link">
-                          Assessment
-                      </Link>
-                  </li>
               </>
             )}
         </ul>
